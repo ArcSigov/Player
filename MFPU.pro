@@ -13,27 +13,24 @@ SOURCES += \
     display.cpp \
     filereader.cpp \
     fontreader.cpp \
-    insertingsettings.cpp \
+    label.cpp \
     main.cpp \
     mainwindow.cpp \
-    mylineedit.cpp \
-    page_creator.cpp \
-    text_editor.cpp
+    sbireader.cpp \
+    sbitoolreader.cpp
 
 HEADERS += \
     button.h \
     display.h \
     filereader.h \
     fontreader.h \
-    insertingsettings.h \
+    label.h \
     mainwindow.h \
-    mylineedit.h \
-    page_creator.h \
-    text_editor.h \
+    sbireader.h \
+    sbitoolreader.h \
     utils.h
 
 FORMS += \
-    insertingsettings.ui \
     mainwindow.ui
 
 resources.files = \
@@ -47,3 +44,8 @@ RESOURCES = resources
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+
+
+
+

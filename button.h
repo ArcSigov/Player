@@ -8,7 +8,8 @@ enum class btnstyle
 {
     def,
     black_background,
-    white_text_black_background
+    white_text_black_background,
+    clicked
 };
 
 class MyButton : public QPushButton

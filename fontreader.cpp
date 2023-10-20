@@ -20,13 +20,13 @@ QByteArray SreReader::readFrom(const QString& path)
             auto line = out.readLine();
             if (line.contains("S3"))
             {
-                auto bytes_count = QString(line.begin()+2,2).toUInt(nullptr,16) - 5;
+                auto bytes_count = QString(line.cbegin()+2,2).toUInt(nullptr,16) - 5;
                 for (auto pos = 0ull; pos < bytes_count * 2; pos+=2)
                 {
                     if (sequence == ByteSeq::LittleEndian)
-                        data.push_back(QString(line.begin()+12+pos,2).toUInt(nullptr,16));
+                        data.push_back(QString(line.cbegin()+12+pos,2).toUInt(nullptr,16));
                     else
-                        data.push_front(QString(line.begin()+12+pos,2).toUInt(nullptr,16));
+                        data.push_front(QString(line.cbegin()+12+pos,2).toUInt(nullptr,16));
                 }
             }
         }
@@ -36,26 +36,4 @@ QByteArray SreReader::readFrom(const QString& path)
 }
 
 
-/** Осуществляет запись данных в файл по заданному пути из массива байтов */
-void SreReader::writeTo(const QString& path,const QByteArray& data)
-{
 
-}
-
-/** Осуществляет запись данных в файл по заданному пути из списка массива байтов */
-void SreReader::writeTo(const QString& path,const QByteArrayList& data)
-{
-
-}
-
-/** Осуществляет запись данных в файл по заданному пути из списка строк */
-void SreReader::writeTo(const QString& path,const QStringList& data)
-{
-
-}
-
-/** Осуществляет запись данных в файл по заданному пути из строки */
-void SreReader::writeTo(const QString& path,const QString& data)
-{
-
-}

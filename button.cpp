@@ -27,6 +27,9 @@ void MyButton::setStyle(const btnstyle& style)
         setStyleSheet("QPushButton{color: white;background: black; border: 1px solid white;}"
                       "QPushButton:hover{color: black;background: white;}");
         break;
+    case btnstyle::clicked:
+        setStyleSheet("QPushButton{color: black;background: white;}");
+        break;
     default:break;
     }
 }
