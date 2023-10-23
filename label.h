@@ -4,7 +4,7 @@
 #include <QLabel>
 #include <QObject>
 #include <QTimer>
-enum class labelstyle
+enum class dioistyle
 {
     def,
     black,
@@ -17,7 +17,7 @@ class Diod : public QLabel
     Q_OBJECT
 public:
     Diod(QWidget* parent = nullptr);
-    void setStyle(const labelstyle& style, const bool& ping = false);
+    void setStyle(const dioistyle& style, const bool& ping = false);
 
 public   slots:
     void ping();

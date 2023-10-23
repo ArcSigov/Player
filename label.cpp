@@ -8,15 +8,15 @@ Diod::Diod(QWidget* parent ) : QLabel(parent)
 }
 
 
-void Diod::setStyle(const labelstyle& style,const bool& is_ping) {
+void Diod::setStyle(const dioistyle& style,const bool& is_ping) {
     switch (style){
-        case labelstyle::def:
+        case dioistyle::def:
             setStyleSheet({});
         break;
-        case labelstyle::green:
+        case dioistyle::green:
             setStyleSheet("min-width: 8px; min-height: 8px;max-width:8px; max-height: 8px;border-radius: 5px;  border:1px solid black;background:#00e000");
         break;
-        case labelstyle::black:
+        case dioistyle::black:
             setStyleSheet("min-width: 8px; min-height: 8px;max-width:8px; max-height: 8px;border-radius: 5px;  border:1px solid black;background:black");
         break;
     default: break;

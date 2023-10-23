@@ -42,7 +42,7 @@
         </property>
         <property name="maximumSize">
          <size>
-          <width>442</width>
+          <width>443</width>
           <height>614</height>
          </size>
         </property>
@@ -1913,35 +1913,38 @@ QPushButton:hover{color: black;background: white;}</string>
           </widget>
          </item>
          <item row="2" column="1">
-          <widget class="QPushButton" name="play">
+          <widget class="MyButton" name="mfpu1_play">
            <property name="text">
             <string/>
            </property>
           </widget>
          </item>
          <item row="2" column="0">
-          <widget class="QPushButton" name="back">
+          <widget class="MyButton" name="back">
            <property name="text">
             <string/>
            </property>
           </widget>
          </item>
          <item row="2" column="3">
-          <widget class="QPushButton" name="next">
+          <widget class="MyButton" name="next">
            <property name="text">
             <string/>
            </property>
           </widget>
          </item>
          <item row="0" column="0" colspan="4">
-          <widget class="QSlider" name="step">
+          <widget class="QSlider" name="step_mfpu1">
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="tickPosition">
+            <enum>QSlider::TicksAbove</enum>
            </property>
           </widget>
          </item>
          <item row="2" column="2">
-          <widget class="QPushButton" name="pause">
+          <widget class="MyButton" name="mfpu1_pause">
            <property name="text">
             <string/>
            </property>
@@ -1964,7 +1967,7 @@ QPushButton:hover{color: black;background: white;}</string>
         </property>
         <property name="maximumSize">
          <size>
-          <width>442</width>
+          <width>443</width>
           <height>614</height>
          </size>
         </property>
@@ -3720,21 +3723,21 @@ QPushButton:hover{color: black;background: white;}</string>
         </property>
         <layout class="QGridLayout" name="gridLayout_3">
          <item row="0" column="0" colspan="4">
-          <widget class="QSlider" name="step_2">
+          <widget class="QSlider" name="step_mfpu2">
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
            </property>
           </widget>
          </item>
          <item row="2" column="1">
-          <widget class="QPushButton" name="play_2">
+          <widget class="MyButton" name="mfpu2_play">
            <property name="text">
             <string/>
            </property>
           </widget>
          </item>
          <item row="2" column="3">
-          <widget class="QPushButton" name="next_2">
+          <widget class="MyButton" name="next_2">
            <property name="text">
             <string/>
            </property>
@@ -3751,14 +3754,14 @@ QPushButton:hover{color: black;background: white;}</string>
           </widget>
          </item>
          <item row="2" column="0">
-          <widget class="QPushButton" name="back_2">
+          <widget class="MyButton" name="back_2">
            <property name="text">
             <string/>
            </property>
           </widget>
          </item>
          <item row="2" column="2">
-          <widget class="QPushButton" name="pause_2">
+          <widget class="MyButton" name="mfpu2_pause">
            <property name="text">
             <string/>
            </property>
@@ -3781,7 +3784,7 @@ QPushButton:hover{color: black;background: white;}</string>
         </property>
         <property name="maximumSize">
          <size>
-          <width>442</width>
+          <width>443</width>
           <height>614</height>
          </size>
         </property>
@@ -5547,35 +5550,35 @@ QPushButton:hover{color: black;background: white;}</string>
           </widget>
          </item>
          <item row="2" column="0">
-          <widget class="QPushButton" name="back_3">
+          <widget class="MyButton" name="back_3">
            <property name="text">
             <string/>
            </property>
           </widget>
          </item>
          <item row="0" column="0" colspan="4">
-          <widget class="QSlider" name="step_3">
+          <widget class="QSlider" name="step_mfpu3">
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
            </property>
           </widget>
          </item>
          <item row="2" column="3">
-          <widget class="QPushButton" name="next_3">
+          <widget class="MyButton" name="next_3">
            <property name="text">
             <string/>
            </property>
           </widget>
          </item>
          <item row="2" column="1">
-          <widget class="QPushButton" name="play_3">
+          <widget class="MyButton" name="mfpu3_play">
            <property name="text">
             <string/>
            </property>
           </widget>
          </item>
          <item row="2" column="2">
-          <widget class="QPushButton" name="pause_3">
+          <widget class="MyButton" name="mfpu3_pause">
            <property name="text">
             <string/>
            </property>
@@ -5603,13 +5606,21 @@ QPushButton:hover{color: black;background: white;}</string>
     </property>
     <addaction name="open_sbi"/>
     <addaction name="exit"/>
+    <addaction name="action_2"/>
    </widget>
    <widget class="QMenu" name="menu_5">
     <property name="title">
      <string>Помощь</string>
     </property>
    </widget>
+   <widget class="QMenu" name="menu_6">
+    <property name="title">
+     <string>Настройки</string>
+    </property>
+    <addaction name="filtr"/>
+   </widget>
    <addaction name="menu_2"/>
+   <addaction name="menu_6"/>
    <addaction name="menu_5"/>
   </widget>
   <action name="open_sbi">
@@ -5626,6 +5637,21 @@ QPushButton:hover{color: black;background: white;}</string>
   <action name="exit">
    <property name="text">
     <string>Выход</string>
+   </property>
+  </action>
+  <action name="filtr">
+   <property name="text">
+    <string>Фильтр страниц</string>
+   </property>
+  </action>
+  <action name="action">
+   <property name="text">
+    <string>Сохранить кадры</string>
+   </property>
+  </action>
+  <action name="action_2">
+   <property name="text">
+    <string>Сохранить как...</string>
    </property>
   </action>
  </widget>
