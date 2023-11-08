@@ -10,11 +10,11 @@ enum class ByteSeq
     BigEndian
 };
 
-class SreReader : public FileReader
+class FontReader : public FileReader
 {
     Q_OBJECT
         public:
-        explicit SreReader(QObject *parent = nullptr, const ByteSeq& seq = ByteSeq::LittleEndian);
+        explicit FontReader(QObject *parent = nullptr, const ByteSeq& seq = ByteSeq::LittleEndian);
 
             /** Осуществляет чтение данных в массив байт из файла по заданному пути */
             QByteArray readFrom(const QString& path = QDir::currentPath()+"/font_mfpu.sre")   override;

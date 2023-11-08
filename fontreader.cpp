@@ -1,14 +1,14 @@
 #include "fontreader.h"
 #include <QTextStream>
 
-SreReader::SreReader(QObject *parent,  const ByteSeq& seq) : FileReader(parent), sequence(seq)
+FontReader::FontReader(QObject *parent,  const ByteSeq& seq) : FileReader(parent), sequence(seq)
 {
 
 
 }
 
 /** Осуществляет чтение данных sre файла в порядке BE или LE в массив байт из файла по заданному пути */
-QByteArray SreReader::readFrom(const QString& path)
+QByteArray FontReader::readFrom(const QString& path)
 {
     file->setFileName(path);
     QByteArray  data;

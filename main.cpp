@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 
 
     MainWindow    w;
-    SreReader     reader(nullptr,ByteSeq::LittleEndian);
+    FontReader     reader(nullptr,ByteSeq::LittleEndian);
     SbiRSReader   RsReader;
     SbiToolReader toolreader;
 

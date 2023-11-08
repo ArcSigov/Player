@@ -1894,7 +1894,7 @@ QPushButton:hover{color: black;background: white;}</string>
         </property>
         <property name="maximumSize">
          <size>
-          <width>441</width>
+          <width>443</width>
           <height>100</height>
          </size>
         </property>
@@ -3714,7 +3714,7 @@ QPushButton:hover{color: black;background: white;}</string>
         </property>
         <property name="maximumSize">
          <size>
-          <width>441</width>
+          <width>443</width>
           <height>100</height>
          </size>
         </property>
@@ -5531,7 +5531,7 @@ QPushButton:hover{color: black;background: white;}</string>
         </property>
         <property name="maximumSize">
          <size>
-          <width>441</width>
+          <width>443</width>
           <height>100</height>
          </size>
         </property>

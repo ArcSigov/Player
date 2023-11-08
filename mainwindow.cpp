@@ -487,16 +487,16 @@ void MainWindow::updatePlayer()
     auto timer = qobject_cast<QTimer*>(QObject::sender());
     auto slider = qobject_cast<QSlider*>(QObject::sender());
 
-    if      (btn == ui->mfpu1_play)      pults[0].ticker->start();
-    else if (btn == ui->mfpu2_play)      pults[1].ticker->start();
-    else if (btn == ui->mfpu3_play)      pults[2].ticker->start();
-    else if (btn == ui->mfpu1_pause)     pults[0].ticker->stop();
-    else if (btn == ui->mfpu2_pause)     pults[1].ticker->stop();
-    else if (btn == ui->mfpu3_pause)     pults[2].ticker->stop();
-    else if (timer == pults[0].ticker)   play(0);
-    else if (timer == pults[1].ticker)   play(1);
-    else if (timer == pults[2].ticker)   play(2);
-    else if (slider == ui->step_mfpu1)   pults[0].step = ui->step_mfpu1->value();
-    else if (slider == ui->step_mfpu2)   pults[1].step = ui->step_mfpu2->value();
-    else if (slider == ui->step_mfpu3)   pults[2].step = ui->step_mfpu3->value();
+    if      (btn    == ui->mfpu1_play)    pults[0].ticker->start();
+    else if (btn    == ui->mfpu2_play)    pults[1].ticker->start();
+    else if (btn    == ui->mfpu3_play)    pults[2].ticker->start();
+    else if (btn    == ui->mfpu1_pause)   pults[0].ticker->stop();
+    else if (btn    == ui->mfpu2_pause)   pults[1].ticker->stop();
+    else if (btn    == ui->mfpu3_pause)   pults[2].ticker->stop();
+    else if (timer  == pults[0].ticker)   play(0);
+    else if (timer  == pults[1].ticker)   play(1);
+    else if (timer  == pults[2].ticker)   play(2);
+    else if (slider == ui->step_mfpu1)    pults[0].step = ui->step_mfpu1->value();
+    else if (slider == ui->step_mfpu2)    pults[1].step = ui->step_mfpu2->value();
+    else if (slider == ui->step_mfpu3)    pults[2].step = ui->step_mfpu3->value();
 }
