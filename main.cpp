@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
     w.show();
 
     QObject::connect(&w,&MainWindow::FileChanged,&toolreader,&SbiToolReader::readFrom);
-    QObject::connect(&toolreader,&FileReader::DataReady,&w,&MainWindow::setbytes);
+    QObject::connect(&toolreader,&FontReader::DataReady,&w,&MainWindow::setbytes);
     QObject::connect(&RsReader,&FileReader::DataReady,&w,&MainWindow::setbytes);
 
    return a.exec();
