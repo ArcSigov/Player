@@ -500,3 +500,9 @@ void MainWindow::updatePlayer()
     else if (slider == ui->step_mfpu2)    pults[1].step = ui->step_mfpu2->value();
     else if (slider == ui->step_mfpu3)    pults[2].step = ui->step_mfpu3->value();
 }
+
+void MainWindow::on_filtr_triggered()
+{
+
+}
+

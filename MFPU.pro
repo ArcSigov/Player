@@ -12,6 +12,7 @@ SOURCES += \
     button.cpp \
     display.cpp \
     filereader.cpp \
+    filter.cpp \
     fontreader.cpp \
     label.cpp \
     main.cpp \
@@ -23,6 +24,7 @@ HEADERS += \
     button.h \
     display.h \
     filereader.h \
+    filter.h \
     fontreader.h \
     label.h \
     mainwindow.h \
@@ -31,6 +33,7 @@ HEADERS += \
     utils.h
 
 FORMS += \
+    filter.ui \
     mainwindow.ui
 
 resources.files = \
