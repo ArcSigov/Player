@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1091</width>
+    <width>1441</width>
     <height>580</height>
    </rect>
   </property>
@@ -20,19 +20,396 @@
    <string>Form</string>
   </property>
   <layout class="QGridLayout" name="gridLayout_3">
-   <item row="0" column="2">
-    <widget class="QGroupBox" name="groupBox_3">
-     <property name="title">
-      <string>МФПУ ШО</string>
-     </property>
-    </widget>
-   </item>
    <item row="0" column="1">
     <widget class="QGroupBox" name="groupBox_2">
      <property name="title">
       <string>МФПУ ШН</string>
      </property>
-     <layout class="QGridLayout" name="gridLayout_2"/>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="0" column="2">
+       <layout class="QVBoxLayout" name="verticalLayout_7">
+        <item>
+         <widget class="QCheckBox" name="azimut_na_ot_2">
+          <property name="text">
+           <string>АЗИМУТ НА/ОТ</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="vor2_2">
+          <property name="text">
+           <string>VOR2</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="vor1_2">
+          <property name="text">
+           <string>VOR1</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="sredstva_koi_2">
+          <property name="text">
+           <string>СРЕДСТВА КОИ</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="pbd_pm_2">
+          <property name="text">
+           <string>ПБД ПМ</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="ruch_korr_2">
+          <property name="text">
+           <string>РУЧ КОРР</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="dme_dme_2">
+          <property name="text">
+           <string>DME/DME</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="pryamo_na_2">
+          <property name="text">
+           <string>ПРЯМО НА</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="sns_rsdn_osnod_ans_2">
+          <property name="text">
+           <string>СНС РСДН ОСНОД АНС</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="manevr_2">
+          <property name="text">
+           <string>МАНЕВР</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="iipe_2">
+          <property name="text">
+           <string>ИИПЭ</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="vor_dme_2">
+          <property name="text">
+           <string>VOR/DME</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="bk_2">
+          <property name="text">
+           <string>БК</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="korr_kursa_2">
+          <property name="text">
+           <string>КОРР КУРСА</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="rts_2">
+          <property name="text">
+           <string>РТС</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="vyrazh_2">
+          <property name="text">
+           <string>ВИРАЖ</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="stand_razv_2">
+          <property name="text">
+           <string>СТАНД РАЗВ</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="otvorot_na_ru_2">
+          <property name="text">
+           <string>ОТВОРОТ НА РУ</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="0" column="1">
+       <layout class="QVBoxLayout" name="verticalLayout_6">
+        <item>
+         <widget class="QCheckBox" name="zozh_3">
+          <property name="text">
+           <string>ЗОЖ</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="rezhim_schisl_3">
+          <property name="text">
+           <string>РЕЖИМ СЧИСЛ</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="blizh_aer_3">
+          <property name="text">
+           <string>БЛИЖ АЭР</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="pbd_marsh_3">
+          <property name="text">
+           <string>ПБД МАРШ</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="obr_stand_3">
+          <property name="text">
+           <string>ОБР СТАНД</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="chelnock_3">
+          <property name="text">
+           <string>ЧЕЛНОК</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="kens_3">
+          <property name="text">
+           <string>КЭНС</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="cvm_3">
+          <property name="text">
+           <string>ЦВМ</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="syst_posadky_3">
+          <property name="text">
+           <string>СИСТ ПОСАДКИ</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="rsbn_3">
+          <property name="text">
+           <string>РСБН</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="nav_3">
+          <property name="text">
+           <string>НАВ</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="plan_pol_3">
+          <property name="text">
+           <string>ПЛАН ПОЛ</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="pbd_rts_3">
+          <property name="text">
+           <string>ПБД РТС</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="ark_3">
+          <property name="text">
+           <string>АРК</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="arv_arp_3">
+          <property name="text">
+           <string>АРВ АРП</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="galsir_3">
+          <property name="text">
+           <string>ГАЛСИР</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="pbd_aer_3">
+          <property name="text">
+           <string>ПБД АЭР</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="rezhim_vyhoda_3">
+          <property name="text">
+           <string>РЕЖИМ ВЫХОДА</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="0" column="0">
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <widget class="QCheckBox" name="ins_2">
+          <property name="text">
+           <string>ИНС</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="vyppol_2">
+          <property name="text">
+           <string>ВЫП ПОЛ</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="diss_2">
+          <property name="text">
+           <string>ДИСС</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="_19_2">
+          <property name="text">
+           <string>19</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="korr_2">
+          <property name="text">
+           <string>КОРР</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="suo_2">
+          <property name="text">
+           <string>СУО</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="basu_2">
+          <property name="text">
+           <string>БАСУ</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="orbit_2">
+          <property name="text">
+           <string>ОРБИТА</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="inf_bks_2">
+          <property name="text">
+           <string>ИНФ БКС</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="pol_dann_2">
+          <property name="text">
+           <string>ПОЛ ДАНН</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="pbd_or_2">
+          <property name="text">
+           <string>ПБД ОР</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="zony_2">
+          <property name="text">
+           <string>ЗОНЫ</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="posadka_2">
+          <property name="text">
+           <string>ПОСАДКА</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="Tzad_2">
+          <property name="text">
+           <string>Тзад</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="menu_2">
+          <property name="text">
+           <string>МЕНЮ</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="ydalenie_pbd_2">
+          <property name="text">
+           <string>УДАЛЕНИЕ ПБД</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="rls_oels_2">
+          <property name="text">
+           <string>РЛС ОЭЛС</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
     </widget>
    </item>
    <item row="0" column="0">
@@ -419,6 +796,398 @@
          <widget class="QCheckBox" name="rezhim_vyhoda">
           <property name="text">
            <string>РЕЖИМ ВЫХОДА</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="0" column="2">
+    <widget class="QGroupBox" name="groupBox_3">
+     <property name="title">
+      <string>МФПУ ШО</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_5">
+      <item row="0" column="2">
+       <layout class="QVBoxLayout" name="verticalLayout_9">
+        <item>
+         <widget class="QCheckBox" name="azimut_na_ot_3">
+          <property name="text">
+           <string>АЗИМУТ НА/ОТ</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="vor2_3">
+          <property name="text">
+           <string>VOR2</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="vor1_3">
+          <property name="text">
+           <string>VOR1</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="sredstva_koi_3">
+          <property name="text">
+           <string>СРЕДСТВА КОИ</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="pbd_pm_3">
+          <property name="text">
+           <string>ПБД ПМ</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="ruch_korr_3">
+          <property name="text">
+           <string>РУЧ КОРР</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="dme_dme_3">
+          <property name="text">
+           <string>DME/DME</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="pryamo_na_3">
+          <property name="text">
+           <string>ПРЯМО НА</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="sns_rsdn_osnod_ans_3">
+          <property name="text">
+           <string>СНС РСДН ОСНОД АНС</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="manevr_3">
+          <property name="text">
+           <string>МАНЕВР</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="iipe_3">
+          <property name="text">
+           <string>ИИПЭ</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="vor_dme_3">
+          <property name="text">
+           <string>VOR/DME</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="bk_3">
+          <property name="text">
+           <string>БК</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="korr_kursa_3">
+          <property name="text">
+           <string>КОРР КУРСА</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="rts_3">
+          <property name="text">
+           <string>РТС</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="vyrazh_3">
+          <property name="text">
+           <string>ВИРАЖ</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="stand_razv_3">
+          <property name="text">
+           <string>СТАНД РАЗВ</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="otvorot_na_ru_3">
+          <property name="text">
+           <string>ОТВОРОТ НА РУ</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="0" column="1">
+       <layout class="QVBoxLayout" name="verticalLayout_10">
+        <item>
+         <widget class="QCheckBox" name="zozh_4">
+          <property name="text">
+           <string>ЗОЖ</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="rezhim_schisl_4">
+          <property name="text">
+           <string>РЕЖИМ СЧИСЛ</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="blizh_aer_4">
+          <property name="text">
+           <string>БЛИЖ АЭР</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="pbd_marsh_4">
+          <property name="text">
+           <string>ПБД МАРШ</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="obr_stand_4">
+          <property name="text">
+           <string>ОБР СТАНД</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="chelnock_4">
+          <property name="text">
+           <string>ЧЕЛНОК</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="kens_4">
+          <property name="text">
+           <string>КЭНС</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="cvm_4">
+          <property name="text">
+           <string>ЦВМ</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="syst_posadky_4">
+          <property name="text">
+           <string>СИСТ ПОСАДКИ</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="rsbn_4">
+          <property name="text">
+           <string>РСБН</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="nav_4">
+          <property name="text">
+           <string>НАВ</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="plan_pol_4">
+          <property name="text">
+           <string>ПЛАН ПОЛ</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="pbd_rts_4">
+          <property name="text">
+           <string>ПБД РТС</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="ark_4">
+          <property name="text">
+           <string>АРК</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="arv_arp_4">
+          <property name="text">
+           <string>АРВ АРП</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="galsir_4">
+          <property name="text">
+           <string>ГАЛСИР</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="pbd_aer_4">
+          <property name="text">
+           <string>ПБД АЭР</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="rezhim_vyhoda_4">
+          <property name="text">
+           <string>РЕЖИМ ВЫХОДА</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="0" column="0">
+       <layout class="QVBoxLayout" name="verticalLayout_11">
+        <item>
+         <widget class="QCheckBox" name="ins_4">
+          <property name="text">
+           <string>ИНС</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="vyppol_4">
+          <property name="text">
+           <string>ВЫП ПОЛ</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="diss_4">
+          <property name="text">
+           <string>ДИСС</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="_19_3">
+          <property name="text">
+           <string>19</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="korr_4">
+          <property name="text">
+           <string>КОРР</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="suo_4">
+          <property name="text">
+           <string>СУО</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="basu_4">
+          <property name="text">
+           <string>БАСУ</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="orbit_4">
+          <property name="text">
+           <string>ОРБИТА</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="inf_bks_4">
+          <property name="text">
+           <string>ИНФ БКС</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="pol_dann_4">
+          <property name="text">
+           <string>ПОЛ ДАНН</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="pbd_or_4">
+          <property name="text">
+           <string>ПБД ОР</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="zony_4">
+          <property name="text">
+           <string>ЗОНЫ</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="posadka_4">
+          <property name="text">
+           <string>ПОСАДКА</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="Tzad_4">
+          <property name="text">
+           <string>Тзад</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="menu_4">
+          <property name="text">
+           <string>МЕНЮ</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="ydalenie_pbd_4">
+          <property name="text">
+           <string>УДАЛЕНИЕ ПБД</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="rls_oels_4">
+          <property name="text">
+           <string>РЛС ОЭЛС</string>
           </property>
          </widget>
         </item>
