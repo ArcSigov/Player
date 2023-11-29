@@ -503,6 +503,6 @@ void MainWindow::updatePlayer()
 
 void MainWindow::on_filtr_triggered()
 {
-
+    filter.show();
 }
 

@@ -7,6 +7,8 @@
 #include "label.h"
 #include "display.h"
 #include "utils.h"
+#include "filter.h"
+
 QT_BEGIN_NAMESPACE
     namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -38,9 +40,11 @@ private:
     Ui::MainWindow *ui;
     QHash<size_t,QByteArray> d;
     QHash<size_t,pult> pults;
+    Filter filter;
 private slots:
     void updatePlayer();
     void on_open_sbi_triggered();
+    void on_filtr_triggered();
 };
 
 
