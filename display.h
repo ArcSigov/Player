@@ -26,8 +26,7 @@ public:
     LCDDisplay(QWidget* parent = nullptr);
     void readFonts(const QByteArray& fonts);
 public slots:
-    void read_text(const QVector<text_t>& _page_text);
-    void draw_data(const mfpu_out_b_t* data);
+    void draw_data(const mfpu_out_data_b_t& data);
 protected:
     void initializeGL() override;
     void resizeGL(int w, int h)  override;
@@ -35,7 +34,7 @@ protected:
 private:
     void draw_symb(const mfpu_out_sbi_symbol_b_t& symb);
     Colour checkColour(const size_t& colour);
-    mfpu_out_b_t d;
+    mfpu_out_data_b_t d;
     QByteArray fnt;
     void generatePixels(const QByteArray& bytes);
     void generateTextures();

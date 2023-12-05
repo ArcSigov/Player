@@ -122,11 +122,20 @@ typedef struct mfpu_out_sbi_sa_b_t {
    mfpu_out_sbi_symbol_b_t         symbols_b[28];    //!< Слова состояния символов одной строки на экране МФПУ
 } mfpu_out_sbi_sa_b_t;
 
+typedef struct mfpu_out_data_b_t{
+    mfpu_out_sbi_sa_b_t data[12];
+}mfpu_out_data_b_t;
+
 typedef struct mfpu_out_b_t{
     size_t time;
-    mfpu_out_sbi_sa_b_t data[12]; //! Выходные данные МФПУ об индицируемом тексте, сигнализаторах и кнопках, МКИО-1.1 (данные для СБИ)
+    mfpu_out_data_b_t data; //! Выходные данные МФПУ об индицируемом тексте, сигнализаторах и кнопках, МКИО-1.1 (данные для СБИ)
 }mfpu_out_b_t;
 
+typedef struct frame_info{
+    QString name;
+    QString time;
+    mfpu_out_data_b_t info;
+}frame_info;
 
 //! Таблица конвертирования ASCII в код шрифтов МФПУ
 const uchar ascii_to_mfpu_font_table[2][0x100] = {
@@ -166,5 +175,7 @@ const uchar ascii_to_mfpu_font_table[2][0x100] = {
       0x0e, 0x01, 0x13, 0x40, 0x5b, 0x17, 0x5c, 0x5d, 0x5e, 0x5f, 0x60, 0x7b, 0x7c, 0x7d, 0x7e, 0x7f
     }
 };
+
+
 
 #endif // UTILS_H
