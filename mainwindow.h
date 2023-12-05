@@ -37,6 +37,7 @@ private:
     void play(const size_t& pos);
     QHash<size_t,pult> pults;
     QVector<QVector<frame_info>> mfpu_frame_data;
+    void createTree(const QString& levelName, const QVector<frame_info>& mfpu);
 private slots:
     void updatePlayer();
     void on_open_sbi_triggered();

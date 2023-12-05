@@ -7,6 +7,7 @@
 #include <QFileDialog>
 #include <QDateTime>
 #include <QSlider>
+#include <QTreeWidgetItem>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -451,6 +452,7 @@ void MainWindow::updateData(const QVector<QVector<frame_info>>& data)
 
     if (mfpu_frame_data[0].size() > 0)
     {
+        createTree("Кадры полёта МФПУ КК",mfpu_frame_data[0]);
         ui->step_mfpu1->setTickInterval(100);
         ui->step_mfpu1->setMaximum(mfpu_frame_data[0].size());
         ui->progress->setText(mfpu_frame_data[0].front().time + "/" + mfpu_frame_data[0].back().time);
@@ -458,12 +460,14 @@ void MainWindow::updateData(const QVector<QVector<frame_info>>& data)
 
     if (mfpu_frame_data[1].size() > 0)
     {
+        createTree("Кадры полёта МФПУ ШН",mfpu_frame_data[1]);
         ui->step_mfpu2->setTickInterval(100);
         ui->step_mfpu2->setMaximum(mfpu_frame_data[1].size());
         ui->progress_2->setText(mfpu_frame_data[1].front().time + "/" + mfpu_frame_data[1].back().time);
     }
     if (mfpu_frame_data[2].size() > 0)
     {
+        createTree("Кадры полёта МФПУ ШО",mfpu_frame_data[2]);
         ui->step_mfpu3->setTickInterval(100);
         ui->step_mfpu3->setMaximum(mfpu_frame_data[2].size());
         ui->progress_3->setText(mfpu_frame_data[2].front().time + "/" + mfpu_frame_data[2].back().time);
@@ -505,4 +509,43 @@ void MainWindow::updatePlayer()
     else if (slider == ui->step_mfpu3)    pults[2].step = ui->step_mfpu3->value();
 }
 
-
+void MainWindow::createTree(const QString &levelName, const QVector<frame_info> &mfpu)
+{
+    if (!ui->treeWidget->findItems(levelName,Qt::MatchStartsWith).size())
+    {
+        QTreeWidgetItem* item = new QTreeWidgetItem(100);
+        item->setText(0,levelName);
+        for (const auto& frame:mfpu)
+        {
+            bool finded = false;
+            QTreeWidgetItem* findedChild;
+            for (auto i = 0 ; i < item->childCount();i++)
+            {
+                findedChild = item->child(i);
+                if (findedChild->text(0) == frame.name)
+                {
+                    finded = true;
+                    break;
+                }
+            }
+            if (!finded)
+            {
+                QTreeWidgetItem* child = new QTreeWidgetItem(101);
+                child->setText(0,frame.name);
+                child->setText(1,frame.time);
+                item->addChild(child);
+            }
+            else
+            {
+                QTreeWidgetItem* child = new QTreeWidgetItem(101);
+                child->setText(1,frame.time);
+                findedChild->addChild(child);
+            }
+        }
+        ui->treeWidget->addTopLevelItem(item);
+    }
+    else
+    {
+        qDebug() << "skip";
+    }
+}
