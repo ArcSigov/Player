@@ -13,17 +13,17 @@ QT_BEGIN_NAMESPACE
     namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
 
+struct pult{
+    QTimer*        ticker;
+    QVector<Diod*> diods;
+    QHash<size_t,MyButton*> btns;
+    LCDDisplay* display;
+    size_t         step{0};
+};
+
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
-    struct pult{
-        QTimer*        ticker;
-        QVector<Diod*> diods;
-        QHash<size_t,MyButton*> btns;
-        LCDDisplay* display;
-        size_t         step{0};
-    };
-
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();

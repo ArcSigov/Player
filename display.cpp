@@ -34,9 +34,15 @@ void LCDDisplay::resizeGL(int w, int h)
 }
 
 
-void LCDDisplay::draw_data(const mfpu_out_data_b_t& data){
-    memset(&d,0,sizeof(mfpu_out_data_b_t));
-    memcpy(&d,&data,sizeof(mfpu_out_data_b_t));
+void LCDDisplay::read_text(const QVector<text_t>& _page_text)
+{
+    Q_UNUSED(_page_text)
+    paintGL();
+}
+
+void LCDDisplay::draw_data(const mfpu_out_b_t* data){
+    memset(&d,0,sizeof(mfpu_out_b_t));
+    memcpy(&d,data,sizeof(mfpu_out_b_t));
     glClear(GL_COLOR_BUFFER_BIT);
     paintGL();
     repaint();
@@ -46,15 +52,15 @@ void LCDDisplay::paintGL()
 {    
     for (auto i = 0 ; i < 12; i++)
     {
-        if (d.data[i].id_b.line_number > 0)
+        if (d.data.data[i].id_b.line_number > 0)
         {
-            auto x = coordinates[d.data[i].id_b.line_number-1][0];
-            auto y = coordinates[d.data[i].id_b.line_number-1][1];
+            auto x = coordinates[d.data.data[i].id_b.line_number-1][0];
+            auto y = coordinates[d.data.data[i].id_b.line_number-1][1];
             for (auto pos = 0 ; pos < 28; pos++)
             {
                 glPushMatrix();
                 glTranslatef(x,y,0.);
-                draw_symb(d.data[i].symbols_b[pos]);
+                draw_symb(d.data.data[i].symbols_b[pos]);
                 glPopMatrix();
                 x++;
             }

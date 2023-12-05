@@ -382,96 +382,102 @@ MainWindow::~MainWindow()
 
 void MainWindow::play(const size_t& pos)
 {
-    qDebug() << "__PRETTY_FUNCTION__";
-    auto frame = mfpu_frame_data[pos][pults[0].step];
-    pults[pos].display->draw_data(frame.info);
-    for (auto j = 0 ; j < 12; j++)
+    if (mfpu_frame_data[pos].size() && pults[pos].step != mfpu_frame_data[pos].size())
     {
-       pults[pos].diods[0]      ->    setStyle(frame.info.data[j].button_fires_1_b.plan ?         dioistyle::green : dioistyle::black );
-       pults[pos].diods[1]      ->    setStyle(frame.info.data[j].button_fires_1_b.active_route ? dioistyle::green : dioistyle::black );
-       pults[pos].diods[2]      ->    setStyle(frame.info.data[j].button_fires_1_b.comb ?         dioistyle::green : dioistyle::black );
-       pults[pos].diods[3]      ->    setStyle(frame.info.data[j].button_fires_2_b.rts ?          dioistyle::green : dioistyle::black );
-       pults[pos].diods[4]      ->    setStyle(frame.info.data[j].button_fires_1_b.u19 ?          dioistyle::green : dioistyle::black );
-       pults[pos].diods[5]      ->    setStyle(frame.info.data[j].button_fires_1_b.basu ?         dioistyle::green : dioistyle::black );
-       pults[pos].diods[6]      ->    setStyle(frame.info.data[j].button_fires_1_b.flight_data ?  dioistyle::green : dioistyle::black );
-       pults[pos].diods[7]      ->    setStyle(frame.info.data[j].button_fires_1_b.suo ?          dioistyle::green : dioistyle::black );
-       pults[pos].diods[8]      ->    setStyle(frame.info.data[j].button_fires_1_b.nav ?          dioistyle::green : dioistyle::black );
-       pults[pos].diods[9]      ->    setStyle(frame.info.data[j].button_fires_2_b.selected_time ?dioistyle::green : dioistyle::black );
-       pults[pos].diods[10]     ->    setStyle(frame.info.data[j].button_fires_2_b.maneuver ?     dioistyle::green : dioistyle::black );
-       pults[pos].diods[11]     ->    setStyle(frame.info.data[j].button_fires_2_b.isp ?          dioistyle::green : dioistyle::black, frame.info.data[j].button_fires_2_b.isp);
-       pults[pos].diods[12]     ->    setStyle(frame.info.data[j].button_fires_2_b.arv_arp ?      dioistyle::green : dioistyle::black );
-       pults[pos].diods[13]     ->    setStyle(frame.info.data[j].button_fires_2_b.corr ?         dioistyle::green : dioistyle::black );
-       pults[pos].diods[14]     ->    setStyle(frame.info.data[j].button_fires_2_b.bks ?          dioistyle::green : dioistyle::black );
-       pults[pos].diods[15]     ->    setStyle(frame.info.data[j].button_fires_2_b.mfpu_control ? dioistyle::green : dioistyle::black );
-       pults[pos].diods[16]     ->    setStyle(frame.info.data[j].button_fires_2_b.iipa ?         dioistyle::green : dioistyle::black );
-       pults[pos].diods[17]     ->    setStyle(frame.info.data[j].button_fires_2_b.digits ?       dioistyle::green : dioistyle::black );
-       pults[pos].diods[18]     ->    setStyle(frame.info.data[j].button_fires_2_b.eng ?          dioistyle::green : dioistyle::black );
-
-        for (const auto& b:qAsConst(pults[pos].btns))
-            b->setStyle(btnstyle::white_text_black_background);
-
-        if (frame.info.data[j].button_fires_1_b.pressed_button)
+        auto f = mfpu_frame_data[pos][pults[pos].step];
+        mfpu_out_b_t out;
+        memcpy(&out.data,&f.info.data,sizeof(mfpu_out_sbi_sa_b_t)*12);
+        pults[pos].display->draw_data(&out);
+        for (auto j = 0 ; j < 12; j++)
         {
-            auto btn = pults[pos].btns.find(frame.info.data[j].button_fires_1_b.pressed_button);
-            if (btn != pults[pos].btns.end())
-                btn.value()->setStyle(btnstyle::clicked);
-        }
-    }
+           pults[pos].diods[0]      ->    setStyle(f.info.data[j].button_fires_1_b.plan ?         dioistyle::green : dioistyle::black );
+           pults[pos].diods[1]      ->    setStyle(f.info.data[j].button_fires_1_b.active_route ? dioistyle::green : dioistyle::black );
+           pults[pos].diods[2]      ->    setStyle(f.info.data[j].button_fires_1_b.comb ?         dioistyle::green : dioistyle::black );
+           pults[pos].diods[3]      ->    setStyle(f.info.data[j].button_fires_2_b.rts ?          dioistyle::green : dioistyle::black );
+           pults[pos].diods[4]      ->    setStyle(f.info.data[j].button_fires_1_b.u19 ?          dioistyle::green : dioistyle::black );
+           pults[pos].diods[5]      ->    setStyle(f.info.data[j].button_fires_1_b.basu ?         dioistyle::green : dioistyle::black );
+           pults[pos].diods[6]      ->    setStyle(f.info.data[j].button_fires_1_b.flight_data ?  dioistyle::green : dioistyle::black );
+           pults[pos].diods[7]      ->    setStyle(f.info.data[j].button_fires_1_b.suo ?          dioistyle::green : dioistyle::black );
+           pults[pos].diods[8]      ->    setStyle(f.info.data[j].button_fires_1_b.nav ?          dioistyle::green : dioistyle::black );
+           pults[pos].diods[9]      ->    setStyle(f.info.data[j].button_fires_2_b.selected_time ?dioistyle::green : dioistyle::black );
+           pults[pos].diods[10]     ->    setStyle(f.info.data[j].button_fires_2_b.maneuver ?     dioistyle::green : dioistyle::black );
+           pults[pos].diods[11]     ->    setStyle(f.info.data[j].button_fires_2_b.isp ?          dioistyle::green : dioistyle::black, f.info.data[j].button_fires_2_b.isp);
+           pults[pos].diods[12]     ->    setStyle(f.info.data[j].button_fires_2_b.arv_arp ?      dioistyle::green : dioistyle::black );
+           pults[pos].diods[13]     ->    setStyle(f.info.data[j].button_fires_2_b.corr ?         dioistyle::green : dioistyle::black );
+           pults[pos].diods[14]     ->    setStyle(f.info.data[j].button_fires_2_b.bks ?          dioistyle::green : dioistyle::black );
+           pults[pos].diods[15]     ->    setStyle(f.info.data[j].button_fires_2_b.mfpu_control ? dioistyle::green : dioistyle::black );
+           pults[pos].diods[16]     ->    setStyle(f.info.data[j].button_fires_2_b.iipa ?         dioistyle::green : dioistyle::black );
+           pults[pos].diods[17]     ->    setStyle(f.info.data[j].button_fires_2_b.digits ?       dioistyle::green : dioistyle::black );
+           pults[pos].diods[18]     ->    setStyle(f.info.data[j].button_fires_2_b.eng ?          dioistyle::green : dioistyle::black );
 
-    switch (pos)
-    {
-        case 0:
-            ui->progress->setText(frame.time+"/"+mfpu_frame_data[pos].back().time);
-            ui->step_mfpu1->setValue(pults[pos].step);
-            break;
-        case 1:
-            ui->progress_2->setText(frame.time+"/"+mfpu_frame_data[pos].back().time);
-            ui->step_mfpu2->setValue(pults[pos].step);
-            break;
-        case 2:
-            ui->progress_3->setText(frame.time+"/"+mfpu_frame_data[pos].back().time);
-            ui->step_mfpu3->setValue(pults[pos].step);
-            break;
-        default: break;
+            for (const auto& b:qAsConst(pults[pos].btns))
+                b->setStyle(btnstyle::white_text_black_background);
+
+            if (f.info.data[j].button_fires_1_b.pressed_button)
+            {
+                auto btn = pults[pos].btns.find(f.info.data[j].button_fires_1_b.pressed_button);
+                if (btn != pults[pos].btns.end())
+                    btn.value()->setStyle(btnstyle::clicked);
+            }
+        }
+
+        switch (pos)
+        {
+            case 0:
+                ui->progress->setText(f.time+"/"+mfpu_frame_data[pos].back().time);
+                ui->step_mfpu1->setValue(pults[pos].step);
+                break;
+            case 1:
+                ui->progress_2->setText(f.time+"/"+mfpu_frame_data[pos].back().time);
+                ui->step_mfpu2->setValue(pults[pos].step);
+                break;
+            case 2:
+                ui->progress_3->setText(f.time+"/"+mfpu_frame_data[pos].back().time);
+                ui->step_mfpu3->setValue(pults[pos].step);
+                break;
+            default: break;
+        }
+        pults[pos].step++;
     }
-    pults[pos].step++;
+    else
+    {
+        pults[pos].step = 0;
+    }
 }
 
 void MainWindow::updateData(const QVector<QVector<frame_info>>& data)
 {
     mfpu_frame_data = data;
 
-    if (mfpu_frame_data[0].size())
+    if (mfpu_frame_data[0].size() > 0)
     {
         ui->step_mfpu1->setTickInterval(100);
         ui->step_mfpu1->setMaximum(mfpu_frame_data[0].size());
         ui->progress->setText(mfpu_frame_data[0].front().time + "/" + mfpu_frame_data[0].back().time);
     }
 
-    if (mfpu_frame_data[1].size())
+    if (mfpu_frame_data[1].size() > 0)
     {
         ui->step_mfpu2->setTickInterval(100);
         ui->step_mfpu2->setMaximum(mfpu_frame_data[1].size());
         ui->progress_2->setText(mfpu_frame_data[1].front().time + "/" + mfpu_frame_data[1].back().time);
     }
-    if (mfpu_frame_data[2].size())
+    if (mfpu_frame_data[2].size() > 0)
     {
-        ui->step_mfpu2->setTickInterval(100);
-        ui->step_mfpu2->setMaximum(mfpu_frame_data[2].size());
-        ui->progress_2->setText(mfpu_frame_data[2].front().time + "/" + mfpu_frame_data[2].back().time);
+        ui->step_mfpu3->setTickInterval(100);
+        ui->step_mfpu3->setMaximum(mfpu_frame_data[2].size());
+        ui->progress_3->setText(mfpu_frame_data[2].front().time + "/" + mfpu_frame_data[2].back().time);
     }
 }
 
 void MainWindow::readfonts(const QByteArray& fnt)
 {
-
     for (const auto& pult:qAsConst(pults))
         pult.display->readFonts(fnt);
 }
 
 void MainWindow::on_open_sbi_triggered()
 {
-
     auto path = QFileDialog::getExistingDirectory(this,"",QDir::currentPath());
     QDirIterator files (path, QStringList() << "*.bin" << "*.txt", QDir::Files);
     while (files.hasNext())

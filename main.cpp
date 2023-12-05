@@ -19,9 +19,7 @@ int main(int argc, char **argv)
 
 
     w.readfonts(reader.readFrom("font_mfpu.sre"));
-    qDebug() << "???";
     w.show();
-    qDebug() << "!!!";
 
 
     QObject::connect(&w,&MainWindow::FileChanged,&toolreader,&SbiToolReader::readFrom);
