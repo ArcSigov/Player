@@ -7,8 +7,10 @@
 #include "label.h"
 #include "display.h"
 #include "utils.h"
-
-
+#include <QThread>
+#include <QMutex>
+#include <QTreeWidgetItem>
+#include "treemanager.h"
 QT_BEGIN_NAMESPACE
     namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -24,10 +26,15 @@ struct pult{
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
+    QString cfg;
+    QHash<size_t,pult> pults;
+    QVector<QVector<frame_info>> mfpu_frame_data;
+    TreeManager* treemanager;
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
     void readfonts(const QByteArray& fnt);
+    void readcfg(const QByteArray& cfg);
 public slots:
     void updateData(const QVector<QVector<frame_info>>& data);
 signals:
@@ -35,12 +42,10 @@ signals:
 private:
     Ui::MainWindow *ui;
     void play(const size_t& pos);
-    QHash<size_t,pult> pults;
-    QVector<QVector<frame_info>> mfpu_frame_data;
-    void createTree(const QString& levelName, const QVector<frame_info>& mfpu);
 private slots:
     void updatePlayer();
     void on_open_sbi_triggered();
+    void on_treeWidget_itemDoubleClicked(QTreeWidgetItem *item, int column);
 };
 
 

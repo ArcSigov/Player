@@ -5,6 +5,7 @@
 #include "sbireader.h"
 #include "sbitoolreader.h"
 #include "mfpudataparser.h"
+#include "cfgwriter.h"
 
 int main(int argc, char **argv)
 {
@@ -16,16 +17,14 @@ int main(int argc, char **argv)
     FontReader    reader(nullptr,ByteSeq::LittleEndian);
     SbiRSReader   RsReader;
     SbiToolReader toolreader;
-
+    CfgReader     cfgreader;
 
     w.readfonts(reader.readFrom("font_mfpu.sre"));
     w.show();
 
 
-    QObject::connect(&w,&MainWindow::FileChanged,&toolreader,&SbiToolReader::readFrom);
-    QObject::connect(&toolreader,&FontReader::DataReady,&parser,&MfpuDataParser::parseData);
-    QObject::connect(&parser,&MfpuDataParser::dataUpgraded,&w,&MainWindow::updateData);
-
-
+   QObject::connect(&w,&MainWindow::FileChanged,&toolreader,&SbiToolReader::readFrom);
+   QObject::connect(&toolreader,&FontReader::DataReady,&parser,&MfpuDataParser::parseData);
+   QObject::connect(&parser,&MfpuDataParser::dataUpgraded,&w,&MainWindow::updateData);
    return a.exec();
 }

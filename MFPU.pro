@@ -10,6 +10,7 @@ CONFIG += c++14
 
 SOURCES += \
     button.cpp \
+    cfgwriter.cpp \
     display.cpp \
     filereader.cpp \
     fontreader.cpp \
@@ -18,10 +19,12 @@ SOURCES += \
     mainwindow.cpp \
     mfpudataparser.cpp \
     sbireader.cpp \
-    sbitoolreader.cpp
+    sbitoolreader.cpp \
+    treemanager.cpp
 
 HEADERS += \
     button.h \
+    cfgwriter.h \
     display.h \
     filereader.h \
     fontreader.h \
@@ -30,6 +33,7 @@ HEADERS += \
     mfpudataparser.h \
     sbireader.h \
     sbitoolreader.h \
+    treemanager.h \
     utils.h
 
 FORMS += \

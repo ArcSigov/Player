@@ -34,6 +34,9 @@ public slots:
         Q_UNUSED(path)
         Q_UNUSED(data)
     }
+    virtual void writeTo(const QString& data){
+       Q_UNUSED(data)
+   }
 signals:
     void DataReady(const QByteArray&);
 protected:

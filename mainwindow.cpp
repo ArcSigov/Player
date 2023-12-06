@@ -15,6 +15,8 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
+    treemanager = new TreeManager(ui->treeWidget,this);
+
     pults[0].diods.push_back(ui->planpolled);   //ms->button_fires_1_b.plan
     pults[0].diods.push_back(ui->vyppolled);    //ms->button_fires_1_b.active_route
     pults[0].diods.push_back(ui->prymonaled);   //ms->button_fires_1_b.comb
@@ -452,7 +454,7 @@ void MainWindow::updateData(const QVector<QVector<frame_info>>& data)
 
     if (mfpu_frame_data[0].size() > 0)
     {
-        createTree("Кадры полёта МФПУ КК",mfpu_frame_data[0]);
+        treemanager->createTree("КК",mfpu_frame_data[0]);
         ui->step_mfpu1->setTickInterval(100);
         ui->step_mfpu1->setMaximum(mfpu_frame_data[0].size());
         ui->progress->setText(mfpu_frame_data[0].front().time + "/" + mfpu_frame_data[0].back().time);
@@ -460,18 +462,26 @@ void MainWindow::updateData(const QVector<QVector<frame_info>>& data)
 
     if (mfpu_frame_data[1].size() > 0)
     {
-        createTree("Кадры полёта МФПУ ШН",mfpu_frame_data[1]);
+        treemanager->createTree("ШН",mfpu_frame_data[1]);
         ui->step_mfpu2->setTickInterval(100);
         ui->step_mfpu2->setMaximum(mfpu_frame_data[1].size());
         ui->progress_2->setText(mfpu_frame_data[1].front().time + "/" + mfpu_frame_data[1].back().time);
     }
     if (mfpu_frame_data[2].size() > 0)
     {
-        createTree("Кадры полёта МФПУ ШО",mfpu_frame_data[2]);
+        treemanager->createTree("ШО",mfpu_frame_data[2]);
         ui->step_mfpu3->setTickInterval(100);
         ui->step_mfpu3->setMaximum(mfpu_frame_data[2].size());
         ui->progress_3->setText(mfpu_frame_data[2].front().time + "/" + mfpu_frame_data[2].back().time);
     }
+}
+
+void MainWindow::readcfg(const QByteArray& cfg)
+{
+    if (!cfg.size())
+        this->cfg = QDir::currentPath();
+    else
+        this->cfg = QString::fromStdString(cfg.toStdString());
 }
 
 void MainWindow::readfonts(const QByteArray& fnt)
@@ -482,8 +492,12 @@ void MainWindow::readfonts(const QByteArray& fnt)
 
 void MainWindow::on_open_sbi_triggered()
 {
-    auto path = QFileDialog::getExistingDirectory(this,"",QDir::currentPath());
+    auto path = QFileDialog::getExistingDirectory(this,"",this->cfg);
     QDirIterator files (path, QStringList() << "*.bin" << "*.txt", QDir::Files);
+
+    if (!files.filePath().isEmpty())
+        this->cfg = files.filePath();
+
     while (files.hasNext())
        emit FileChanged(files.next());
 }
@@ -509,43 +523,28 @@ void MainWindow::updatePlayer()
     else if (slider == ui->step_mfpu3)    pults[2].step = ui->step_mfpu3->value();
 }
 
-void MainWindow::createTree(const QString &levelName, const QVector<frame_info> &mfpu)
+
+
+void MainWindow::on_treeWidget_itemDoubleClicked(QTreeWidgetItem *item, int column)
 {
-    if (!ui->treeWidget->findItems(levelName,Qt::MatchStartsWith).size())
-    {
-        QTreeWidgetItem* item = new QTreeWidgetItem(100);
-        item->setText(0,levelName);
-        for (const auto& frame:mfpu)
-        {
-            bool finded = false;
-            QTreeWidgetItem* findedChild;
-            for (auto i = 0 ; i < item->childCount();i++)
-            {
-                findedChild = item->child(i);
-                if (findedChild->text(0) == frame.name)
-                {
-                    finded = true;
-                    break;
-                }
-            }
-            if (!finded)
-            {
-                QTreeWidgetItem* child = new QTreeWidgetItem(101);
-                child->setText(0,frame.name);
-                child->setText(1,frame.time);
-                item->addChild(child);
-            }
-            else
-            {
-                QTreeWidgetItem* child = new QTreeWidgetItem(101);
-                child->setText(1,frame.time);
-                findedChild->addChild(child);
-            }
-        }
-        ui->treeWidget->addTopLevelItem(item);
-    }
-    else
-    {
-        qDebug() << "skip";
-    }
+   auto result = treemanager->findInTree(item,column);
+   if (result.size() == 3)
+   {
+       auto num = 0;
+       if      (result[0] == "KK") num = 0;
+       else if (result[0] == "ШН") num = 1;
+       else if (result[0] == "ШО") num = 2;
+       for (auto i = 0 ; i < mfpu_frame_data[num].size();i++)
+       {
+           if (mfpu_frame_data[num][i].name.contains(result[1]) &&
+               mfpu_frame_data[num][i].time.contains(result[2]))
+           {
+               pults[num].ticker->stop();
+               pults[num].step = i;
+               play(num);
+               break;
+           }
+       }
+   }
 }
+
