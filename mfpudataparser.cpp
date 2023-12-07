@@ -42,9 +42,9 @@ QString MfpuDataParser::find_name(const mfpu_out_sbi_sa_b_t& data)
     {
         if (!(data.symbols_b[i].code >= 0x80 && data.symbols_b[i].code <= 0x9a))
         {
-         if (data.symbols_b[i].forecolor == 6 || data.symbols_b[i].forecolor == 2)
+         if (data.symbols_b[i].forecolor == 6 )
                out.push_back(codec->toUnicode((char*)&data.symbols_b[i],1));
-         else if (data.symbols_b[i].forecolor == 0)
+         else if (data.symbols_b[i].forecolor == 0 || data.symbols_b[i].forecolor == 2)
                out.push_back(" ");
         }
     }
