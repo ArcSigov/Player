@@ -4,13 +4,6 @@
 #include <QStringList>
 #include <QVector>
 
-enum SymbSize
-{
-    high,
-    medium,
-    low
-};
-
 enum class Colour
 {
     black     = 0x000000,
@@ -23,52 +16,6 @@ enum class Colour
     purple    = 0xf800f8
 };
 
-enum class TextAligh
-{
-    center,
-    left,
-    right
-};
-
-enum TextPosition
-{
-    HEADER_1,
-    HEADER_2,
-    KVS1L_1,
-    KVS1L_2,
-    KVS2L_1,
-    KVS2L_2,
-    KVS3L_1,
-    KVS3L_2,
-    KVS4L_1,
-    KVS4L_2,
-    KVS5L_1,
-    KVS5L_2,
-    KVS1R_1,
-    KVS1R_2,
-    KVS2R_1,
-    KVS2R_2,
-    KVS3R_1,
-    KVS3R_2,
-    KVS4R_1,
-    KVS4R_2,
-    KVS5R_1,
-    KVS5R_2
-};
-
-enum Type
-{
-    Button,
-    String,
-    Switcher,
-    Header
-};
-
-struct text_t
-{
-    QStringList      text;      //список текста для этой строки (будет на экране последовательно рисоваться)
-    QVector<Colour>  colour;    //список цветов этого текста    (дисплей будет красить его по позициям листа)
-};
 //! Слово-идентификатор сообщения (для СБИ)
 typedef struct mfpu_out_sbi_id_b_t {
    uint16_t message_number : 12; //!< Номер сообщения (изменяется после передачи всех строк в СБИ) //(min:1 max:4095)
