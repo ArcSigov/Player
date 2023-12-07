@@ -11,6 +11,7 @@
 #include <QMutex>
 #include <QTreeWidgetItem>
 #include "treemanager.h"
+#include <QTextCodec>
 QT_BEGIN_NAMESPACE
     namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -20,7 +21,7 @@ struct pult{
     QVector<Diod*> diods;
     QHash<size_t,MyButton*> btns;
     LCDDisplay* display;
-    size_t         step{0};
+    QSlider*    step;
 };
 
 class MainWindow : public QMainWindow
@@ -28,13 +29,15 @@ class MainWindow : public QMainWindow
     Q_OBJECT
     QString cfg;
     QHash<size_t,pult> pults;
-    QVector<QVector<frame_info>> mfpu_frame_data;
+    QVector<QVector<frame_info>> mfpu_frame_data{{},{},{}};
     TreeManager* treemanager;
+    QTextCodec* codec;
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
     void readfonts(const QByteArray& fnt);
     void readcfg(const QByteArray& cfg);
+    void defaultShow();
 public slots:
     void updateData(const QVector<QVector<frame_info>>& data);
 signals:
@@ -46,6 +49,7 @@ private slots:
     void updatePlayer();
     void on_open_sbi_triggered();
     void on_treeWidget_itemDoubleClicked(QTreeWidgetItem *item, int column);
+    frame_info initDefaultFrame();
 };
 
 
