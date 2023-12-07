@@ -33,13 +33,6 @@ void LCDDisplay::resizeGL(int w, int h)
     glLoadIdentity();
 }
 
-
-void LCDDisplay::read_text(const QVector<text_t>& _page_text)
-{
-    Q_UNUSED(_page_text)
-    paintGL();
-}
-
 void LCDDisplay::draw_data(const mfpu_out_b_t* data){
     memset(&d,0,sizeof(mfpu_out_b_t));
     memcpy(&d,data,sizeof(mfpu_out_b_t));

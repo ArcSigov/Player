@@ -26,7 +26,6 @@ public:
     LCDDisplay(QWidget* parent = nullptr);
     void readFonts(const QByteArray& fonts);
 public slots:
-    void read_text(const QVector<text_t>& _page_text);
     void draw_data(const mfpu_out_b_t* data);
 protected:
     void initializeGL() override;
