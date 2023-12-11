@@ -16,7 +16,7 @@ class TreeManager : public QObject
     Q_OBJECT
 public:
     TreeManager(QTreeWidget*, QObject* parent = nullptr);
-    void createTree(const QString& treeName,const QVector<frame_info> &mfpu);
+    void createTree(const QString& treeName, const QVector<frame_info> &mfpu, const bool &type);
     QStringList findInTree(QTreeWidgetItem* item, int column);
 private:
     QTreeWidget* tree;

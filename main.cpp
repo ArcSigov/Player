@@ -12,6 +12,7 @@ int main(int argc, char **argv)
     QApplication a(argc, argv);
     auto path = QDir::currentPath();
     QDir::setCurrent(path);
+
     MainWindow    w;
     MfpuDataParser parser;
     FontReader    reader(nullptr,ByteSeq::LittleEndian);

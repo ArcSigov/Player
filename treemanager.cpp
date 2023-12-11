@@ -5,30 +5,38 @@
 TreeManager::TreeManager(QTreeWidget* _tree, QObject* parent) : QObject(parent), tree(_tree)
 {
 
+    _tree->clear();
 
 }
 
-void TreeManager::createTree(const QString& treeName,const QVector<frame_info> &mfpu)
+void TreeManager::createTree(const QString& treeName,const QVector<frame_info> &mfpu, const bool& type)
 {
     if (tree && !tree->findItems(treeName,Qt::MatchStartsWith).size())
     {
+        QFont f;
+        f.setItalic(true);
+        f.setPointSize(8);
         QTreeWidgetItem* item = new QTreeWidgetItem(100);
-        item->setText(idMFPU,treeName);
+        item->setText(idMFPU,treeName);        
         for (const auto& frame:mfpu)
         {
             bool finded = false;
             QTreeWidgetItem* findedChild;
-            for (auto i = 0 ; i < item->childCount();i++)
+            if (!type)
             {
-                findedChild = item->child(i);
-                if (findedChild->text(MFPUframe) == frame.name)
+                for (auto i = 0 ; i < item->childCount();i++)
                 {
-                    finded = true;
-                    break;
+                    findedChild = item->child(i);
+                    if (findedChild->text(MFPUframe) == frame.name)
+                    {
+                        finded = true;
+                        break;
+                    }
                 }
             }
+            //если узел не найден или узел найден, но стоит развернутый список
             if (!finded)
-            {
+            {                
                 QTreeWidgetItem* child = new QTreeWidgetItem(101);
                 child->setText(MFPUframe,frame.name);
                 child->setText(FrameTime,frame.time);
@@ -37,7 +45,9 @@ void TreeManager::createTree(const QString& treeName,const QVector<frame_info> &
             else
             {
                 QTreeWidgetItem* child = new QTreeWidgetItem(102);
+                child->setText(MFPUframe,frame.name);
                 child->setText(FrameTime,frame.time);
+                child->setFont(MFPUframe,f);
                 findedChild->addChild(child);
             }
         }

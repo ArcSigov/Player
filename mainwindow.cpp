@@ -15,6 +15,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
+
     codec =  QTextCodec::codecForName("CP1251");
     treemanager = new TreeManager(ui->treeWidget,this);
 
@@ -347,9 +348,9 @@ MainWindow::MainWindow(QWidget *parent)
     pults[0].ticker = new QTimer(this);
     pults[1].ticker = new QTimer(this);
     pults[2].ticker = new QTimer(this);
-    pults[0].ticker->setInterval(500);
-    pults[1].ticker->setInterval(500);
-    pults[2].ticker->setInterval(500);
+    pults[0].ticker->setInterval(1000);
+    pults[1].ticker->setInterval(1000);
+    pults[2].ticker->setInterval(1000);
 
     pults[0].step = ui->step_mfpu1;
     pults[1].step = ui->step_mfpu2;
@@ -381,6 +382,8 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->back_2,&QPushButton::clicked,this, &MainWindow::updatePlayer);
     connect(ui->back_3,&QPushButton::clicked,this, &MainWindow::updatePlayer);
 
+    connect(&setts,&Settings::settingsChecked,this,&MainWindow::readSettings);
+    connect(ui->action_3,&QAction::triggered,&about,&About::show);
 
 
     ui->mfpu1_play->setIcon(style()->standardIcon(QStyle::SP_MediaPlay));
@@ -461,50 +464,20 @@ void MainWindow::play(const size_t& pos)
         }
         pults[pos].step->setValue(pults[pos].step->value()+1);
     }
-    else
-    {
+    else {
         pults[pos].step->setValue(0);
     }
 }
 
 void MainWindow::updateData(const QVector<QVector<frame_info>>& data)
 {
-
     for (auto i = 0 ; i < data.size();i++)
     {
         if (data[i].size()> 0)
+        {
+            setts.EnableNum(i);
             mfpu_frame_data[i] = data[i];
-    }
-
-    if (data[0].size() > 0)
-    {
-        treemanager->createTree("КК",mfpu_frame_data[0]);
-        ui->play_mfpu1->setEnabled(true);
-        ui->mfpu1_pause->setEnabled(false);       
-        ui->step_mfpu1->setTickInterval(100);
-        ui->step_mfpu1->setMaximum(mfpu_frame_data[0].size());
-        play(0);
-        pults[0].step->setValue(0);
-    }
-    if (data[1].size() > 0)
-    {
-        treemanager->createTree("ШН",mfpu_frame_data[1]);
-        ui->play_mfpu2->setEnabled(true);
-        ui->mfpu2_pause->setEnabled(false);
-        ui->step_mfpu2->setTickInterval(100);
-        ui->step_mfpu2->setMaximum(mfpu_frame_data[1].size());
-        play(1);
-        pults[1].step->setValue(0);
-    }
-    if (data[2].size() > 0)
-    {
-        treemanager->createTree("ШО",mfpu_frame_data[2]);
-        ui->play_mfpu3->setEnabled(true);
-        ui->mfpu3_pause->setEnabled(false);        
-        ui->step_mfpu3->setTickInterval(100);
-        ui->step_mfpu3->setMaximum(mfpu_frame_data[2].size());
-        play(2);
-        pults[2].step->setValue(0);
+        }
     }
 }
 
@@ -536,12 +509,51 @@ void MainWindow::on_open_sbi_triggered()
 {
     auto path = QFileDialog::getExistingDirectory(this,"",this->cfg);
     QDirIterator files (path, QStringList() << "*.bin" << "*.txt", QDir::Files);
-
-    if (!files.filePath().isEmpty())
+    if (!path.isEmpty())
+    {
         this->cfg = files.filePath();
+        while (files.hasNext())
+           emit FileChanged(files.next());
 
-    while (files.hasNext())
-       emit FileChanged(files.next());
+        setEnabled(false);
+        setts.show();
+    }
+}
+
+void MainWindow::readSettings(const settings& s)
+{
+    setEnabled(true);
+    ui->treeWidget->clear();
+    if (mfpu_frame_data[0].size() > 0)
+    {
+        treemanager->createTree("КК",mfpu_frame_data[0],s.treetype);
+        ui->play_mfpu1->setEnabled(true);
+        ui->mfpu1_pause->setEnabled(false);
+        ui->step_mfpu1->setTickInterval(100);
+        ui->step_mfpu1->setMaximum(mfpu_frame_data[0].size());
+        play(0);
+        pults[0].step->setValue(0);
+    }
+    if (mfpu_frame_data[1].size() > 0)
+    {
+        treemanager->createTree("ШН",mfpu_frame_data[1],s.treetype);
+        ui->play_mfpu2->setEnabled(true);
+        ui->mfpu2_pause->setEnabled(false);
+        ui->step_mfpu2->setTickInterval(100);
+        ui->step_mfpu2->setMaximum(mfpu_frame_data[1].size());
+        play(1);
+        pults[1].step->setValue(0);
+    }
+    if (mfpu_frame_data[2].size() > 0)
+    {
+        treemanager->createTree("ШО",mfpu_frame_data[2],s.treetype);
+        ui->play_mfpu3->setEnabled(true);
+        ui->mfpu3_pause->setEnabled(false);
+        ui->step_mfpu3->setTickInterval(100);
+        ui->step_mfpu3->setMaximum(mfpu_frame_data[2].size());
+        play(2);
+        pults[2].step->setValue(0);
+    }
 }
 
 void MainWindow::updatePlayer()
@@ -585,12 +597,10 @@ void MainWindow::updatePlayer()
         }
     }
 
-    if (timer  == pults[0].ticker)   play(0);
+    if (timer  == pults[0].ticker)        play(0);
     else if (timer  == pults[1].ticker)   play(1);
     else if (timer  == pults[2].ticker)   play(2);
 }
-
-
 
 void MainWindow::on_treeWidget_itemDoubleClicked(QTreeWidgetItem *item, int column)
 {
@@ -615,6 +625,7 @@ void MainWindow::on_treeWidget_itemDoubleClicked(QTreeWidgetItem *item, int colu
 
 frame_info MainWindow::initDefaultFrame()
 {
+    //mfpu_frame_data
     frame_info def{};
     auto word = codec->fromUnicode("          НЕТ ДАННЫХ           ");
     def.info.data->id_b.line_number = 6;
@@ -631,3 +642,4 @@ frame_info MainWindow::initDefaultFrame()
     }
     return def;
 }
+

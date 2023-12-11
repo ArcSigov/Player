@@ -1,17 +1,19 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include <QTreeWidgetItem>
 #include <QMainWindow>
 #include <QVector>
+#include <QTextCodec>
 #include "button.h"
 #include "label.h"
 #include "display.h"
 #include "utils.h"
-#include <QThread>
-#include <QMutex>
-#include <QTreeWidgetItem>
 #include "treemanager.h"
-#include <QTextCodec>
+#include "about.h"
+#include "settings.h"
+
+
 QT_BEGIN_NAMESPACE
     namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -32,6 +34,8 @@ class MainWindow : public QMainWindow
     QVector<QVector<frame_info>> mfpu_frame_data{{},{},{}};
     TreeManager* treemanager;
     QTextCodec* codec;
+    About about;
+    Settings setts;
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
@@ -40,8 +44,10 @@ public:
     void defaultShow();
 public slots:
     void updateData(const QVector<QVector<frame_info>>& data);
+    void readSettings(const settings& s);
 signals:
      void FileChanged(const QString& path);
+     void enableSetMfpu(const size_t& num);
 private:
     Ui::MainWindow *ui;
     void play(const size_t& pos);
