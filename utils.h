@@ -3,6 +3,7 @@
 
 #include <QStringList>
 #include <QVector>
+#include <QTime>
 
 enum class Colour
 {
@@ -80,7 +81,7 @@ typedef struct mfpu_out_b_t{
 
 typedef struct frame_info{
     QString name;
-    QString time;
+    QTime time;
     mfpu_out_data_b_t info;
 }frame_info;
 

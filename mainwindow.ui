@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1847</width>
+    <width>1850</width>
     <height>783</height>
    </rect>
   </property>
@@ -16,9 +16,15 @@
     <verstretch>0</verstretch>
    </sizepolicy>
   </property>
+  <property name="minimumSize">
+   <size>
+    <width>1850</width>
+    <height>783</height>
+   </size>
+  </property>
   <property name="maximumSize">
    <size>
-    <width>2500</width>
+    <width>1850</width>
     <height>783</height>
    </size>
   </property>
@@ -5653,7 +5659,7 @@ QPushButton:hover{color: black;background: white;}</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1847</width>
+     <width>1850</width>
      <height>21</height>
     </rect>
    </property>
@@ -5673,12 +5679,13 @@ QPushButton:hover{color: black;background: white;}</string>
    </widget>
    <widget class="QMenu" name="menu_6">
     <property name="title">
-     <string>Настройки</string>
+     <string>Инструменты</string>
     </property>
+    <addaction name="action_4"/>
    </widget>
    <addaction name="menu_2"/>
-   <addaction name="menu_5"/>
    <addaction name="menu_6"/>
+   <addaction name="menu_5"/>
   </widget>
   <action name="open_sbi">
    <property name="text">
@@ -5714,6 +5721,11 @@ QPushButton:hover{color: black;background: white;}</string>
   <action name="action_3">
    <property name="text">
     <string>О программе</string>
+   </property>
+  </action>
+  <action name="action_4">
+   <property name="text">
+    <string>Настройки</string>
    </property>
   </action>
  </widget>

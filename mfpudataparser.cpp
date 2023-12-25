@@ -19,7 +19,7 @@ void MfpuDataParser::parseData(const QByteArray& d)
     {
         auto data = (mfpu_out_b_t*)(_d.data()+i);
         frame_info frame;
-        frame.time = QDateTime::fromMSecsSinceEpoch(data->time).time().toString();
+        frame.time = QDateTime::fromMSecsSinceEpoch(data->time).time();
         memcpy(&frame.info,&data->data,sizeof(mfpu_out_data_b_t));
         for (auto j = 0 ; j < 12 ; j++)
         {

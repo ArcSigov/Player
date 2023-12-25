@@ -18,7 +18,7 @@ void TreeManager::createTree(const QString& treeName,const QVector<frame_info> &
         f.setPointSize(8);
         QTreeWidgetItem* item = new QTreeWidgetItem(100);
         item->setText(idMFPU,treeName);        
-        for (const auto& frame:mfpu)
+        for (auto frame = mfpu.begin(); frame!=mfpu.end(); frame++)
         {
             bool finded = false;
             QTreeWidgetItem* findedChild;
@@ -27,26 +27,26 @@ void TreeManager::createTree(const QString& treeName,const QVector<frame_info> &
                 for (auto i = 0 ; i < item->childCount();i++)
                 {
                     findedChild = item->child(i);
-                    if (findedChild->text(MFPUframe) == frame.name)
+                    if (findedChild->text(MFPUframe) == frame->name)
                     {
                         finded = true;
                         break;
                     }
                 }
             }
-            //если узел не найден или узел найден, но стоит развернутый список
+            //если узел не найден
             if (!finded)
             {                
                 QTreeWidgetItem* child = new QTreeWidgetItem(101);
-                child->setText(MFPUframe,frame.name);
-                child->setText(FrameTime,frame.time);
+                child->setText(MFPUframe,frame->name);
+                child->setText(FrameTime,frame->time.toString());
                 item->addChild(child);
             }
             else
             {
                 QTreeWidgetItem* child = new QTreeWidgetItem(102);
-                child->setText(MFPUframe,frame.name);
-                child->setText(FrameTime,frame.time);
+                child->setText(MFPUframe,frame->name);
+                child->setText(FrameTime,frame->time.toString());
                 child->setFont(MFPUframe,f);
                 findedChild->addChild(child);
             }

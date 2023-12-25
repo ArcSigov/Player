@@ -8,6 +8,7 @@
 #include <QDateTime>
 #include <QSlider>
 #include <QTreeWidgetItem>
+#include <algorithm>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -345,62 +346,51 @@ MainWindow::MainWindow(QWidget *parent)
     pults[1].display = ui->openGLWidget_2;
     pults[2].display = ui->openGLWidget_3;
 
-    pults[0].ticker = new QTimer(this);
-    pults[1].ticker = new QTimer(this);
-    pults[2].ticker = new QTimer(this);
-    pults[0].ticker->setInterval(1000);
-    pults[1].ticker->setInterval(1000);
-    pults[2].ticker->setInterval(1000);
+    pults[0].player.step = ui->step_mfpu1;
+    pults[1].player.step = ui->step_mfpu2;
+    pults[2].player.step = ui->step_mfpu3;
 
-    pults[0].step = ui->step_mfpu1;
-    pults[1].step = ui->step_mfpu2;
-    pults[2].step = ui->step_mfpu3;
+    pults[0].player.play = ui->mfpu1_play;
+    pults[1].player.play = ui->mfpu2_play;
+    pults[2].player.play = ui->mfpu3_play;
 
-    pults[0].step->setValue(0);
-    pults[1].step->setValue(0);
-    pults[2].step->setValue(0);
+    pults[0].player.stop = ui->mfpu1_pause;
+    pults[1].player.stop = ui->mfpu2_pause;
+    pults[2].player.stop = ui->mfpu3_pause;
 
+    pults[0].player.next = ui->next;
+    pults[1].player.next = ui->next_2;
+    pults[2].player.next = ui->next_3;
 
-    connect(pults[0].ticker,&QTimer::timeout,this,&MainWindow::updatePlayer);
-    connect(pults[1].ticker,&QTimer::timeout,this,&MainWindow::updatePlayer);
-    connect(pults[2].ticker,&QTimer::timeout,this,&MainWindow::updatePlayer);
-    connect(ui->step_mfpu1,&QAbstractSlider::sliderReleased,this,&MainWindow::updatePlayer);
-    connect(ui->step_mfpu2,&QAbstractSlider::sliderReleased,this,&MainWindow::updatePlayer);
-    connect(ui->step_mfpu3,&QAbstractSlider::sliderReleased,this,&MainWindow::updatePlayer);
-    connect(ui->mfpu1_play,&QPushButton::clicked,this, &MainWindow::updatePlayer);
-    connect(ui->mfpu2_play,&QPushButton::clicked,this, &MainWindow::updatePlayer);
-    connect(ui->mfpu3_play,&QPushButton::clicked,this, &MainWindow::updatePlayer);
-    connect(ui->mfpu1_pause,&QPushButton::clicked,this, &MainWindow::updatePlayer);
-    connect(ui->mfpu2_pause,&QPushButton::clicked,this, &MainWindow::updatePlayer);
-    connect(ui->mfpu3_pause,&QPushButton::clicked,this, &MainWindow::updatePlayer);
+    pults[0].player.back = ui->back;
+    pults[1].player.back = ui->back_2;
+    pults[2].player.back = ui->back_3;
 
-    connect(ui->next,&QPushButton::clicked,this, &MainWindow::updatePlayer);
-    connect(ui->next_2,&QPushButton::clicked,this, &MainWindow::updatePlayer);
-    connect(ui->next_3,&QPushButton::clicked,this, &MainWindow::updatePlayer);
+    pults[0].player.bar = ui->play_mfpu1;
+    pults[1].player.bar = ui->play_mfpu2;
+    pults[2].player.bar = ui->play_mfpu3;
 
-    connect(ui->back,&QPushButton::clicked,this, &MainWindow::updatePlayer);
-    connect(ui->back_2,&QPushButton::clicked,this, &MainWindow::updatePlayer);
-    connect(ui->back_3,&QPushButton::clicked,this, &MainWindow::updatePlayer);
+    for (auto i = 0 ; i < 3; i++)
+    {
+        pults[i].ticker = new QTimer(this);
+        pults[i].ticker->setInterval(1000);
+        pults[i].player.step->setValue(0);
+        pults[i].player.bar->setEnabled(false);
+        connect(pults[i].ticker,&QTimer::timeout,this,&MainWindow::updatePlayer);
+        connect(pults[i].player.play,&QPushButton::clicked,this,&MainWindow::updatePlayer);
+        connect(pults[i].player.stop,&QPushButton::clicked,this,&MainWindow::updatePlayer);
+        connect(pults[i].player.next,&QPushButton::clicked,this,&MainWindow::updatePlayer);
+        connect(pults[i].player.back,&QPushButton::clicked,this,&MainWindow::updatePlayer);
+        connect(pults[i].player.step,&QAbstractSlider::sliderReleased,this,&MainWindow::updatePlayer);
 
+        pults[i].player.play->setIcon(style()->standardIcon(QStyle::SP_MediaPlay));
+        pults[i].player.stop->setIcon(style()->standardIcon(QStyle::SP_MediaPause));
+        pults[i].player.next->setIcon(style()->standardIcon(QStyle::SP_MediaSeekForward));
+        pults[i].player.back->setIcon(style()->standardIcon(QStyle::SP_MediaSeekBackward));
+    }
     connect(&setts,&Settings::settingsChecked,this,&MainWindow::readSettings);
     connect(ui->action_3,&QAction::triggered,&about,&About::show);
-
-
-    ui->mfpu1_play->setIcon(style()->standardIcon(QStyle::SP_MediaPlay));
-    ui->mfpu1_pause->setIcon(style()->standardIcon(QStyle::SP_MediaPause));
-    ui->next->setIcon(style()->standardIcon(QStyle::SP_MediaSeekForward));
-    ui->back->setIcon(style()->standardIcon(QStyle::SP_MediaSeekBackward));
-
-    ui->mfpu2_play->setIcon(style()->standardIcon(QStyle::SP_MediaPlay));
-    ui->mfpu2_pause->setIcon(style()->standardIcon(QStyle::SP_MediaPause));
-    ui->next_2->setIcon(style()->standardIcon(QStyle::SP_MediaSeekForward));
-    ui->back_2->setIcon(style()->standardIcon(QStyle::SP_MediaSeekBackward));
-
-    ui->mfpu3_play->setIcon(style()->standardIcon(QStyle::SP_MediaPlay));
-    ui->mfpu3_pause->setIcon(style()->standardIcon(QStyle::SP_MediaPause));
-    ui->next_3->setIcon(style()->standardIcon(QStyle::SP_MediaSeekForward));
-    ui->back_3->setIcon(style()->standardIcon(QStyle::SP_MediaSeekBackward));
-
+    //connect(ui->action_4,&QAction::triggered,&setts,&Settings::show);
 }
 
 MainWindow::~MainWindow()
@@ -410,9 +400,9 @@ MainWindow::~MainWindow()
 
 void MainWindow::play(const size_t& pos)
 {
-    if (mfpu_frame_data[pos].size() && (pults[pos].step->value() < mfpu_frame_data[pos].size()))
+    if (pults[pos].frame_data.size() && (pults[pos].player.step->value() < pults[pos].frame_data.size()))
     {
-        auto f = mfpu_frame_data[pos][pults[pos].step->value()];
+        auto f = pults[pos].frame_data[pults[pos].player.step->value()];
         mfpu_out_b_t out;
         memcpy(&out.data,&f.info.data,sizeof(mfpu_out_sbi_sa_b_t)*12);
         pults[pos].display->draw_data(&out);
@@ -452,20 +442,20 @@ void MainWindow::play(const size_t& pos)
         switch (pos)
         {
             case 0:
-                ui->progress->setText(f.time+"/"+mfpu_frame_data[pos].back().time);
+                ui->progress->setText(f.time.toString()+"/"+pults[pos].frame_data.back().time.toString());
                 break;
             case 1:
-                ui->progress_2->setText(f.time+"/"+mfpu_frame_data[pos].back().time);              
+                ui->progress_2->setText(f.time.toString()+"/"+pults[pos].frame_data.back().time.toString());
                 break;
             case 2:
-                ui->progress_3->setText(f.time+"/"+mfpu_frame_data[pos].back().time);                
+                ui->progress_3->setText(f.time.toString()+"/"+pults[pos].frame_data.back().time.toString());
                 break;
             default: break;
         }
-        pults[pos].step->setValue(pults[pos].step->value()+1);
+        pults[pos].player.step->setValue(pults[pos].player.step->value()+1);
     }
     else {
-        pults[pos].step->setValue(0);
+        pults[pos].player.step->setValue(0);
     }
 }
 
@@ -476,7 +466,9 @@ void MainWindow::updateData(const QVector<QVector<frame_info>>& data)
         if (data[i].size()> 0)
         {
             setts.EnableNum(i);
-            mfpu_frame_data[i] = data[i];
+            pults[i].frame_data = data[i];
+            pults[i].player.step->setMaximum(data[i].size());
+            play(i);
         }
     }
 }
@@ -495,12 +487,9 @@ void MainWindow::readfonts(const QByteArray& fnt)
 
 void MainWindow::defaultShow()
 {
-    ui->play_mfpu1->setEnabled(false);
-    ui->play_mfpu2->setEnabled(false);
-    ui->play_mfpu3->setEnabled(false);
     for (auto i = 0 ; i < 3;i++)
     {
-        mfpu_frame_data[i].push_back(initDefaultFrame());
+        pults[i].frame_data.push_back(initDefaultFrame());
         play(i);
     }
 }
@@ -520,39 +509,42 @@ void MainWindow::on_open_sbi_triggered()
     }
 }
 
-void MainWindow::readSettings(const settings& s)
+void MainWindow::readSettings(const settings& _s)
 {
     setEnabled(true);
     ui->treeWidget->clear();
-    if (mfpu_frame_data[0].size() > 0)
+    QStringList names = {"КК","ШН","ШО"};
+    s = _s;
+    for (auto i = 0ull; i<3;i++)
     {
-        treemanager->createTree("КК",mfpu_frame_data[0],s.treetype);
-        ui->play_mfpu1->setEnabled(true);
-        ui->mfpu1_pause->setEnabled(false);
-        ui->step_mfpu1->setTickInterval(100);
-        ui->step_mfpu1->setMaximum(mfpu_frame_data[0].size());
-        play(0);
-        pults[0].step->setValue(0);
-    }
-    if (mfpu_frame_data[1].size() > 0)
-    {
-        treemanager->createTree("ШН",mfpu_frame_data[1],s.treetype);
-        ui->play_mfpu2->setEnabled(true);
-        ui->mfpu2_pause->setEnabled(false);
-        ui->step_mfpu2->setTickInterval(100);
-        ui->step_mfpu2->setMaximum(mfpu_frame_data[1].size());
-        play(1);
-        pults[1].step->setValue(0);
-    }
-    if (mfpu_frame_data[2].size() > 0)
-    {
-        treemanager->createTree("ШО",mfpu_frame_data[2],s.treetype);
-        ui->play_mfpu3->setEnabled(true);
-        ui->mfpu3_pause->setEnabled(false);
-        ui->step_mfpu3->setTickInterval(100);
-        ui->step_mfpu3->setMaximum(mfpu_frame_data[2].size());
-        play(2);
-        pults[2].step->setValue(0);
+        if (pults[i].frame_data.size() > 0)
+        {
+            pults[i].player.bar->setEnabled(true);
+            pults[i].player.bar->setStyleSheet("");
+            pults[i].master_num = s.num_mfpu;
+            treemanager->createTree(names[i],pults[i].frame_data,s.treetype);
+            //если выбран этот МФПУ ведущим
+            if (s.num_mfpu && s.num_mfpu == i+1)
+            {
+                pults[i].player.bar->setStyleSheet("QGroupBox{border: 2px solid green}");
+                pults[i].player.play->setEnabled(true);
+                pults[i].player.stop->setEnabled(false);
+            }
+            //если этот не ведущий, но номер выбран
+            else if (s.num_mfpu)
+            {
+                pults[i].player.bar->setEnabled(false);
+                pults[i].player.play = pults[s.num_mfpu-1].player.play;
+                pults[i].player.stop = pults[s.num_mfpu-1].player.stop;
+                pults[i].player.next = pults[s.num_mfpu-1].player.next;
+                pults[i].player.back = pults[s.num_mfpu-1].player.back;
+            }
+            else
+            {
+                pults[i].player.play->setEnabled(true);
+                pults[i].player.stop->setEnabled(false);
+            }
+        }
     }
 }
 
@@ -561,45 +553,38 @@ void MainWindow::updatePlayer()
     auto btn = qobject_cast<QPushButton*>(QObject::sender());
     auto timer = qobject_cast<QTimer*>(QObject::sender());
     auto slider = qobject_cast<QSlider*>(QObject::sender());
-
-    MyButton* btns_play[3]  = {ui->mfpu1_play,ui->mfpu2_play,ui->mfpu3_play};
-    MyButton* btns_pause[3] = {ui->mfpu1_pause,ui->mfpu2_pause,ui->mfpu3_pause};
-    MyButton* btns_back[3]  = {ui->back,ui->back_2,ui->back_3};
-    MyButton* btns_next[3]  = {ui->next,ui->next_2,ui->next_3};
-    QSlider* sliders[3]     = {ui->step_mfpu1,ui->step_mfpu2,ui->step_mfpu3};
-    for (auto i = 0 ; i < 3; i++)
+    for (auto i = 0; i < 3; i++)
     {
-        if (btn == btns_play[i])
+        if (btn == pults[i].player.play)
         {
-            btns_play[i]->setEnabled(false);
-            btns_pause[i]->setEnabled(true);
+            pults[i].player.play->setEnabled(false);
+            pults[i].player.stop->setEnabled(true);
             pults[i].ticker->start();
         }
-        else if (btn == btns_pause[i])
+        else if (btn == pults[i].player.stop)
         {
-            btns_play[i]->setEnabled(true);
-            btns_pause[i]->setEnabled(false);
+            pults[i].player.play->setEnabled(true);
+            pults[i].player.stop->setEnabled(false);
             pults[i].ticker->stop();
         }
-        else if (btn == btns_back[i] && pults[i].step->value())
+        else if (btn == pults[i].player.back && pults[i].player.step->value())
         {
-            pults[i].step->setValue(pults[i].step->value()-2);
-            play(i);
+            pults[i].player.step->setValue(pults[i].player.step->value()-2);
+            auto out = synchronize();
+            if (out[i]) play(i);
         }
-        else if (btn == btns_next[i])
+        else if (btn == pults[i].player.next)
         {
-            pults[i].step->setValue(pults[i].step->value()+1);
-            play(i);
+            pults[i].player.step->setValue(pults[i].player.step->value()+1);
+            auto out = synchronize();
+            if (out[i]) play(i);
         }
-        else if (slider == sliders[i])
+        else if (slider == pults[i].player.step || timer == pults[i].ticker)
         {
-            play(i);
+            auto out = synchronize();
+            if (out[i]) play(i);
         }
     }
-
-    if (timer  == pults[0].ticker)        play(0);
-    else if (timer  == pults[1].ticker)   play(1);
-    else if (timer  == pults[2].ticker)   play(2);
 }
 
 void MainWindow::on_treeWidget_itemDoubleClicked(QTreeWidgetItem *item, int column)
@@ -607,15 +592,15 @@ void MainWindow::on_treeWidget_itemDoubleClicked(QTreeWidgetItem *item, int colu
    auto result = treemanager->findInTree(item,column);
    if (result.size() == 3)
    {
-       auto num = result[0] == "КК" ? 0 :
-                  result[0] == "ШН" ? 1 : 2;
+       auto num = result[0] == "КК" ? 0ull :
+                  result[0] == "ШН" ? 1ull : 2ull;
 
-       for (auto i = 0 ; i < mfpu_frame_data[num].size();i++)
+       for (auto i = 0 ; i < pults[num].frame_data.size();i++)
        {
-           if (mfpu_frame_data[num][i].name.contains(result[1]) &&
-               mfpu_frame_data[num][i].time.contains(result[2]))
+           if (pults[num].frame_data[i].name.contains(result[1]) &&
+               pults[num].frame_data[i].time.toString().contains(result[2]))
            {
-               pults[num].step->setValue(i);
+               pults[num].player.step->setValue(i);
                play(num);
                break;
            }
@@ -625,7 +610,6 @@ void MainWindow::on_treeWidget_itemDoubleClicked(QTreeWidgetItem *item, int colu
 
 frame_info MainWindow::initDefaultFrame()
 {
-    //mfpu_frame_data
     frame_info def{};
     auto word = codec->fromUnicode("          НЕТ ДАННЫХ           ");
     def.info.data->id_b.line_number = 6;
@@ -643,3 +627,39 @@ frame_info MainWindow::initDefaultFrame()
     return def;
 }
 
+QVector<bool> MainWindow::synchronize()
+{
+    QVector<bool> out{false,false,false};
+    if (s.num_mfpu)
+    {
+        auto step = pults[s.num_mfpu-1].player.step->value();
+        auto time = pults[s.num_mfpu-1].frame_data[step].time;
+        for (auto i = 0ull ; i < 3;i++)
+        {
+            //если этот не ведущий
+            if (s.num_mfpu != i+1)
+            {
+                auto pos = std::find_if(pults[i].frame_data.begin(),pults[i].frame_data.end(),[&](frame_info& data){
+                        return abs(time.msecsSinceStartOfDay() - data.time.msecsSinceStartOfDay()) <= 600;
+                });
+                if (pos != pults[i].frame_data.end())
+                {
+                    auto d = std::distance(pults[i].frame_data.begin(),pos);
+                    pults[i].player.step->setValue(d);
+                    out[i] = true;
+                }
+            }
+            else
+            {
+                out[i] = true;
+            }
+        }
+    }
+    else
+    {
+        out[0] = true;
+        out[1] = true;
+        out[2] = true;
+    }
+    return out;
+}
