@@ -19,6 +19,7 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     mfpudataparser.cpp \
+    mfpuplaymanager.cpp \
     sbireader.cpp \
     sbitoolreader.cpp \
     settings.cpp \
@@ -34,6 +35,7 @@ HEADERS += \
     label.h \
     mainwindow.h \
     mfpudataparser.h \
+    mfpuplaymanager.h \
     sbireader.h \
     sbitoolreader.h \
     settings.h \
