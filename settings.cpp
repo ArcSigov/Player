@@ -28,12 +28,8 @@ void Settings::makeInfo()
         if (ui->sn->isChecked()) s.num_mfpu = 2;
         if (ui->so->isChecked()) s.num_mfpu = 3;
     }
-
     if (ui->expanded->isChecked()) s.treetype = 1;
     if (ui->notexpanded->isChecked()) s.treetype = 0;
-
-    qDebug() << s.treetype << s.num_mfpu;
-
     emit settingsChecked(s);
     close();
 }
