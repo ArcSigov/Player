@@ -33,7 +33,7 @@
       <item>
        <widget class="QRadioButton" name="notexpanded">
         <property name="toolTip">
-         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;При такой конфигурации будет сформирован список открытых кадров без иерархии их вызовов. Редактор отобразит список использованных кадров с временем их вызова во вложенном формате.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;При такой конфигурации будет сформирован список открытых кадров за полёт без иерархии их вызовов. Редактор отобразит список использованных кадров с временем их вызова во вложенном формате.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
         <property name="text">
          <string>Вложенно</string>
