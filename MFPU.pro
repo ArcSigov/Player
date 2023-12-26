@@ -36,6 +36,7 @@ HEADERS += \
     mainwindow.h \
     mfpudataparser.h \
     mfpuplaymanager.h \
+    pult.h \
     sbireader.h \
     sbitoolreader.h \
     settings.h \

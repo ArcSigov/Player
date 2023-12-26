@@ -5,38 +5,19 @@
 #include <QMainWindow>
 #include <QVector>
 #include <QTextCodec>
-#include "button.h"
-#include "label.h"
-#include "display.h"
 #include "utils.h"
 #include "treemanager.h"
 #include "about.h"
 #include "settings.h"
 #include <QGroupBox>
+#include "pult.h"
 
 
 QT_BEGIN_NAMESPACE
     namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
 
-struct playerBar{
-    MyButton* play;
-    MyButton* stop;
-    MyButton* next;
-    MyButton* back;
-    QSlider*  step;
-    QGroupBox* bar;
-};
 
-struct pult{
-    size_t         master_num;
-    QTimer*        ticker;
-    QVector<Diod*> diods;
-    QHash<size_t,MyButton*> btns;
-    LCDDisplay* display;    
-    QVector<frame_info> frame_data{};
-    playerBar           player;
-};
 
 class MainWindow : public QMainWindow
 {

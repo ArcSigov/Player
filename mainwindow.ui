@@ -5681,7 +5681,19 @@ QPushButton:hover{color: black;background: white;}</string>
     <property name="title">
      <string>Инструменты</string>
     </property>
+    <widget class="QMenu" name="menu_7">
+     <property name="title">
+      <string>Воспроизведение</string>
+     </property>
+     <addaction name="x1"/>
+     <addaction name="x2"/>
+     <addaction name="x4"/>
+     <addaction name="x8"/>
+     <addaction name="x16"/>
+     <addaction name="x25"/>
+    </widget>
     <addaction name="action_4"/>
+    <addaction name="menu_7"/>
    </widget>
    <addaction name="menu_2"/>
    <addaction name="menu_6"/>
@@ -5726,6 +5738,36 @@ QPushButton:hover{color: black;background: white;}</string>
   <action name="action_4">
    <property name="text">
     <string>Настройки</string>
+   </property>
+  </action>
+  <action name="x1">
+   <property name="text">
+    <string>1 к/с</string>
+   </property>
+  </action>
+  <action name="x2">
+   <property name="text">
+    <string>2 к/с</string>
+   </property>
+  </action>
+  <action name="x4">
+   <property name="text">
+    <string>4 к/с</string>
+   </property>
+  </action>
+  <action name="x8">
+   <property name="text">
+    <string>8 к/с</string>
+   </property>
+  </action>
+  <action name="x16">
+   <property name="text">
+    <string>16 к/с</string>
+   </property>
+  </action>
+  <action name="x25">
+   <property name="text">
+    <string>25 к/с</string>
    </property>
   </action>
  </widget>

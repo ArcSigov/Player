@@ -1,7 +1,7 @@
 #include "mfpuplaymanager.h"
 
-MfpuPlayManager::MfpuPlayManager(QObject *parent)
-    : QObject{parent}
+MfpuPlayManager::MfpuPlayManager(pult* _pult, QObject *parent)
+    : QObject{parent},p(_pult)
 {
 
 }

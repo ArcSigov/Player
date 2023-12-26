@@ -370,6 +370,7 @@ MainWindow::MainWindow(QWidget *parent)
     pults[1].player.bar = ui->play_mfpu2;
     pults[2].player.bar = ui->play_mfpu3;
 
+
     for (auto i = 0 ; i < 3; i++)
     {
         pults[i].ticker = new QTimer(this);
@@ -390,6 +391,13 @@ MainWindow::MainWindow(QWidget *parent)
     }
     connect(&setts,&Settings::settingsChecked,this,&MainWindow::readSettings);
     connect(ui->action_3,&QAction::triggered,&about,&About::show);
+
+    connect(ui->x1,&QAction::triggered,this,&MainWindow::updatePlayer);
+    connect(ui->x2,&QAction::triggered,this,&MainWindow::updatePlayer);
+    connect(ui->x4,&QAction::triggered,this,&MainWindow::updatePlayer);
+    connect(ui->x8,&QAction::triggered,this,&MainWindow::updatePlayer);
+    connect(ui->x16,&QAction::triggered,this,&MainWindow::updatePlayer);
+    connect(ui->x25,&QAction::triggered,this,&MainWindow::updatePlayer);
     //connect(ui->action_4,&QAction::triggered,&setts,&Settings::show);
 }
 
@@ -553,6 +561,7 @@ void MainWindow::updatePlayer()
     auto btn = qobject_cast<QPushButton*>(QObject::sender());
     auto timer = qobject_cast<QTimer*>(QObject::sender());
     auto slider = qobject_cast<QSlider*>(QObject::sender());
+    auto speed = qobject_cast<QAction*>(QObject::sender());
     for (auto i = 0; i < 3; i++)
     {
         if (btn == pults[i].player.play)
@@ -584,6 +593,13 @@ void MainWindow::updatePlayer()
             auto out = synchronize();
             if (out[i]) play(i);
         }
+
+        if      (speed == ui->x1)  pults[i].ticker->setInterval(1000);
+        else if (speed == ui->x2)  pults[i].ticker->setInterval(500);
+        else if (speed == ui->x4)  pults[i].ticker->setInterval(250);
+        else if (speed == ui->x8)  pults[i].ticker->setInterval(125);
+        else if (speed == ui->x16) pults[i].ticker->setInterval(63);
+        else if (speed == ui->x25) pults[i].ticker->setInterval(40);
     }
 }
 
@@ -639,13 +655,12 @@ QVector<bool> MainWindow::synchronize()
             //если этот не ведущий
             if (s.num_mfpu != i+1)
             {
-                auto pos = std::find_if(pults[i].frame_data.begin(),pults[i].frame_data.end(),[&](frame_info& data){
+                auto pos = std::find_if(pults[i].frame_data.begin(),pults[i].frame_data.end(),[time](frame_info& data){
                         return abs(time.msecsSinceStartOfDay() - data.time.msecsSinceStartOfDay()) <= 600;
                 });
                 if (pos != pults[i].frame_data.end())
                 {
-                    auto d = std::distance(pults[i].frame_data.begin(),pos);
-                    pults[i].player.step->setValue(d);
+                    pults[i].player.step->setValue(std::distance(pults[i].frame_data.begin(),pos));
                     out[i] = true;
                 }
             }
