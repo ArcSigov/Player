@@ -32,7 +32,7 @@
    <string>Проигрыватель МФПУ</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="../build-MFPU-Desktop_Qt_5_12_12_MinGW_64_bit-Release/release/qmake_resources.qrc">
+   <iconset>
     <normaloff>:/tu.png</normaloff>:/tu.png</iconset>
   </property>
   <property name="styleSheet">
@@ -5788,8 +5788,6 @@ QPushButton:hover{color: black;background: white;}</string>
    <header location="global">label.h</header>
   </customwidget>
  </customwidgets>
- <resources>
-  <include location="../build-MFPU-Desktop_Qt_5_12_12_MinGW_64_bit-Release/release/qmake_resources.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>
