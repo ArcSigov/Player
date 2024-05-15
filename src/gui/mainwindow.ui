@@ -1,0 +1,5793 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1850</width>
+    <height>783</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1850</width>
+    <height>783</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1850</width>
+    <height>783</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Проигрыватель МФПУ</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>:/tu.png</normaloff>:/tu.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTreeWidget" name="treeWidget">
+    <property name="geometry">
+     <rect>
+      <x>1360</x>
+      <y>10</y>
+      <width>481</width>
+      <height>711</height>
+     </rect>
+    </property>
+    <attribute name="headerCascadingSectionResizes">
+     <bool>true</bool>
+    </attribute>
+    <attribute name="headerStretchLastSection">
+     <bool>true</bool>
+    </attribute>
+    <column>
+     <property name="text">
+      <string>МФПУ </string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>КАДР</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>ВРЕМЯ РЕГИСТРАЦИИ</string>
+     </property>
+    </column>
+   </widget>
+   <widget class="QWidget" name="mfpu2" native="true">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>10</y>
+      <width>443</width>
+      <height>598</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>443</width>
+      <height>614</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(:/pult.PNG);</string>
+    </property>
+    <widget class="MyButton" name="kvs1l_2">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>64</y>
+       <width>32</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="MyButton" name="kvs2l_2">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>109</y>
+       <width>32</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="MyButton" name="kvs3l_2">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>154</y>
+       <width>32</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="MyButton" name="kvs4l_2">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>199</y>
+       <width>32</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="MyButton" name="kvs5l_2">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>244</y>
+       <width>32</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="MyButton" name="kvs1r_2">
+     <property name="geometry">
+      <rect>
+       <x>405</x>
+       <y>64</y>
+       <width>32</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="MyButton" name="kvs2r_2">
+     <property name="geometry">
+      <rect>
+       <x>405</x>
+       <y>109</y>
+       <width>32</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="MyButton" name="kvs3r_2">
+     <property name="geometry">
+      <rect>
+       <x>405</x>
+       <y>154</y>
+       <width>32</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="MyButton" name="kvs4r_2">
+     <property name="geometry">
+      <rect>
+       <x>405</x>
+       <y>199</y>
+       <width>32</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="MyButton" name="kvs5r_2">
+     <property name="geometry">
+      <rect>
+       <x>405</x>
+       <y>244</y>
+       <width>32</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="MyButton" name="PlanPol_2">
+     <property name="geometry">
+      <rect>
+       <x>13</x>
+       <y>20</y>
+       <width>57</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>ПЛАН
+ПОЛ</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="VypPol_2">
+     <property name="geometry">
+      <rect>
+       <x>73</x>
+       <y>20</y>
+       <width>57</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>ВЫП
+ПОЛ</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="PryamoNA_2">
+     <property name="geometry">
+      <rect>
+       <x>133</x>
+       <y>20</y>
+       <width>57</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>ПРЯМО
+НА</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="da19_2">
+     <property name="geometry">
+      <rect>
+       <x>194</x>
+       <y>20</y>
+       <width>57</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>19</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="SUO_2">
+     <property name="geometry">
+      <rect>
+       <x>254</x>
+       <y>20</y>
+       <width>57</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>СУО</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="BASU_2">
+     <property name="geometry">
+      <rect>
+       <x>314</x>
+       <y>20</y>
+       <width>57</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>БАСУ</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="PolDann_2">
+     <property name="geometry">
+      <rect>
+       <x>374</x>
+       <y>20</y>
+       <width>57</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>ПОЛ
+ДАНН</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="Maneur_2">
+     <property name="geometry">
+      <rect>
+       <x>194</x>
+       <y>310</y>
+       <width>57</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>МА
+НЕВР</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="RTS_2">
+     <property name="geometry">
+      <rect>
+       <x>133</x>
+       <y>310</y>
+       <width>57</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>РТС</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="KORR_2">
+     <property name="geometry">
+      <rect>
+       <x>314</x>
+       <y>310</y>
+       <width>57</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>КОРР</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="NAV_2">
+     <property name="geometry">
+      <rect>
+       <x>13</x>
+       <y>310</y>
+       <width>57</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>НАВ</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="ISP_2">
+     <property name="geometry">
+      <rect>
+       <x>374</x>
+       <y>310</y>
+       <width>57</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>ИСП</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="Tzad_2">
+     <property name="geometry">
+      <rect>
+       <x>73</x>
+       <y>310</y>
+       <width>57</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>Тзад</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="ArvArp_2">
+     <property name="geometry">
+      <rect>
+       <x>254</x>
+       <y>310</y>
+       <width>57</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>АРВ
+АРП</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="UprMFPU_2">
+     <property name="geometry">
+      <rect>
+       <x>44</x>
+       <y>496</y>
+       <width>50</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>УПР
+МФПУ</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="InfBKS_2">
+     <property name="geometry">
+      <rect>
+       <x>98</x>
+       <y>496</y>
+       <width>50</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>ИНФ
+БКС</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="ENG_2">
+     <property name="geometry">
+      <rect>
+       <x>152</x>
+       <y>496</y>
+       <width>50</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>ENG</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="CIFR_2">
+     <property name="geometry">
+      <rect>
+       <x>152</x>
+       <y>556</y>
+       <width>50</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>ЦИФР</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="empty_2">
+     <property name="geometry">
+      <rect>
+       <x>98</x>
+       <y>556</y>
+       <width>50</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>НАЗВ
+СТР</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="IIPE_2">
+     <property name="geometry">
+      <rect>
+       <x>44</x>
+       <y>556</y>
+       <width>50</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>ИИПЭ</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="q_2">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>350</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>Q
+     Й</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="a_2">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>390</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="acceptDrops">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>A
+     Ф</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="z_2">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>430</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>Z
+     Я</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="x_2">
+     <property name="geometry">
+      <rect>
+       <x>45</x>
+       <y>430</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>X
+     Ч</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="w_2">
+     <property name="geometry">
+      <rect>
+       <x>45</x>
+       <y>350</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>W
+     Ц</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="s_2">
+     <property name="geometry">
+      <rect>
+       <x>45</x>
+       <y>390</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>S
+     Ы</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="e_2">
+     <property name="geometry">
+      <rect>
+       <x>85</x>
+       <y>350</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>E
+     У</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="d_2">
+     <property name="geometry">
+      <rect>
+       <x>85</x>
+       <y>390</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>D
+     В</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="c_2">
+     <property name="geometry">
+      <rect>
+       <x>85</x>
+       <y>430</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>C
+     С</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="v_2">
+     <property name="geometry">
+      <rect>
+       <x>125</x>
+       <y>430</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>V
+     М</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="y_2">
+     <property name="geometry">
+      <rect>
+       <x>205</x>
+       <y>350</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>Y
+     Н</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="r_2">
+     <property name="geometry">
+      <rect>
+       <x>125</x>
+       <y>350</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>R
+     К</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="t_2">
+     <property name="geometry">
+      <rect>
+       <x>165</x>
+       <y>350</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>T
+     Е</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="g_2">
+     <property name="geometry">
+      <rect>
+       <x>165</x>
+       <y>390</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>G
+     П</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="n_2">
+     <property name="geometry">
+      <rect>
+       <x>205</x>
+       <y>430</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>N
+     Т</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="f_2">
+     <property name="geometry">
+      <rect>
+       <x>125</x>
+       <y>390</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>F
+     А</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="h_2">
+     <property name="geometry">
+      <rect>
+       <x>205</x>
+       <y>390</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>H
+     Р</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="b_2">
+     <property name="geometry">
+      <rect>
+       <x>165</x>
+       <y>430</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>B
+     И</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="ruG_2">
+     <property name="geometry">
+      <rect>
+       <x>365</x>
+       <y>390</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>
+     Ж</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="m_2">
+     <property name="geometry">
+      <rect>
+       <x>245</x>
+       <y>430</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>M
+     Ь</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="o_2">
+     <property name="geometry">
+      <rect>
+       <x>325</x>
+       <y>350</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>O
+     Щ</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="p_2">
+     <property name="geometry">
+      <rect>
+       <x>365</x>
+       <y>350</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>P
+     З</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="u_2">
+     <property name="geometry">
+      <rect>
+       <x>245</x>
+       <y>350</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>U
+     Г</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="i_2">
+     <property name="geometry">
+      <rect>
+       <x>285</x>
+       <y>350</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>I
+     Ш</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="ruA_2">
+     <property name="geometry">
+      <rect>
+       <x>405</x>
+       <y>390</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>
+     Э</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="vvd_2">
+     <property name="geometry">
+      <rect>
+       <x>405</x>
+       <y>430</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>ВВД</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="k_2">
+     <property name="geometry">
+      <rect>
+       <x>285</x>
+       <y>390</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>K
+     Л</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="ruTznak_2">
+     <property name="geometry">
+      <rect>
+       <x>365</x>
+       <y>430</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>/
+     Ъ</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="ruU_2">
+     <property name="geometry">
+      <rect>
+       <x>325</x>
+       <y>430</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>.
+     Ю</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="j_2">
+     <property name="geometry">
+      <rect>
+       <x>245</x>
+       <y>390</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>J
+     О</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="ruX_2">
+     <property name="geometry">
+      <rect>
+       <x>405</x>
+       <y>350</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string> 
+     Х</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="l_2">
+     <property name="geometry">
+      <rect>
+       <x>325</x>
+       <y>390</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>L
+     Д</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="ruB_2">
+     <property name="geometry">
+      <rect>
+       <x>285</x>
+       <y>430</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>,
+     Б</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="three_2">
+     <property name="geometry">
+      <rect>
+       <x>325</x>
+       <y>474</y>
+       <width>37</width>
+       <height>37</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>3</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="seven_2">
+     <property name="geometry">
+      <rect>
+       <x>245</x>
+       <y>554</y>
+       <width>37</width>
+       <height>37</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>7</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="zero_2">
+     <property name="geometry">
+      <rect>
+       <x>205</x>
+       <y>474</y>
+       <width>37</width>
+       <height>37</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="six_2">
+     <property name="geometry">
+      <rect>
+       <x>325</x>
+       <y>514</y>
+       <width>37</width>
+       <height>37</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>6</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="four_2">
+     <property name="geometry">
+      <rect>
+       <x>245</x>
+       <y>514</y>
+       <width>37</width>
+       <height>37</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>4</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="PlusMinus_2">
+     <property name="geometry">
+      <rect>
+       <x>205</x>
+       <y>514</y>
+       <width>37</width>
+       <height>37</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>±</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="five_2">
+     <property name="geometry">
+      <rect>
+       <x>285</x>
+       <y>514</y>
+       <width>37</width>
+       <height>37</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>5</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="eight_2">
+     <property name="geometry">
+      <rect>
+       <x>285</x>
+       <y>554</y>
+       <width>37</width>
+       <height>37</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>8</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="two_2">
+     <property name="geometry">
+      <rect>
+       <x>285</x>
+       <y>474</y>
+       <width>37</width>
+       <height>37</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>2</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="nine_2">
+     <property name="geometry">
+      <rect>
+       <x>325</x>
+       <y>554</y>
+       <width>37</width>
+       <height>37</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>9</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="_1">
+     <property name="geometry">
+      <rect>
+       <x>205</x>
+       <y>554</y>
+       <width>37</width>
+       <height>37</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>_</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="one_2">
+     <property name="geometry">
+      <rect>
+       <x>245</x>
+       <y>474</y>
+       <width>37</width>
+       <height>37</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>1</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="clear_2">
+     <property name="geometry">
+      <rect>
+       <x>375</x>
+       <y>477</y>
+       <width>57</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>СТИР</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="menu_3">
+     <property name="geometry">
+      <rect>
+       <x>375</x>
+       <y>517</y>
+       <width>57</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>МЕНЮ</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="sbros_2">
+     <property name="geometry">
+      <rect>
+       <x>375</x>
+       <y>557</y>
+       <width>36</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>СБР</string>
+     </property>
+    </widget>
+    <widget class="LCDDisplay" name="openGLWidget_2">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>60</y>
+       <width>341</width>
+       <height>231</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="Diod" name="planpolled_2">
+     <property name="geometry">
+      <rect>
+       <x>35</x>
+       <y>7</y>
+       <width>10</width>
+       <height>10</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">min-width: 8px; min-height: 8px;max-width:8px; max-height: 8px;border-radius: 5px;  border:1px solid black;background:black</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="Diod" name="vyppolled_2">
+     <property name="geometry">
+      <rect>
+       <x>95</x>
+       <y>7</y>
+       <width>10</width>
+       <height>10</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">min-width: 8px; min-height: 8px;max-width:8px; max-height: 8px;border-radius: 5px;  border:1px solid black;background:black</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="Diod" name="prymonaled_2">
+     <property name="geometry">
+      <rect>
+       <x>155</x>
+       <y>7</y>
+       <width>10</width>
+       <height>10</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">min-width: 8px; min-height: 8px;max-width:8px; max-height: 8px;border-radius: 5px;  border:1px solid black;background:black</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="Diod" name="led19_2">
+     <property name="geometry">
+      <rect>
+       <x>215</x>
+       <y>7</y>
+       <width>10</width>
+       <height>10</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">min-width: 8px; min-height: 8px;max-width:8px; max-height: 8px;border-radius: 5px;  border:1px solid black;background:black</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="Diod" name="suoled_2">
+     <property name="geometry">
+      <rect>
+       <x>275</x>
+       <y>7</y>
+       <width>10</width>
+       <height>10</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">min-width: 8px; min-height: 8px;max-width:8px; max-height: 8px;border-radius: 5px;  border:1px solid black;background:black</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="Diod" name="basuled_2">
+     <property name="geometry">
+      <rect>
+       <x>335</x>
+       <y>7</y>
+       <width>10</width>
+       <height>10</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">min-width: 8px; min-height: 8px;max-width:8px; max-height: 8px;border-radius: 5px;  border:1px solid black;background:black</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="Diod" name="poldanled_2">
+     <property name="geometry">
+      <rect>
+       <x>395</x>
+       <y>7</y>
+       <width>10</width>
+       <height>10</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">min-width: 8px; min-height: 8px;max-width:8px; max-height: 8px;border-radius: 5px;  border:1px solid black;background:black</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="Diod" name="ispled_2">
+     <property name="geometry">
+      <rect>
+       <x>395</x>
+       <y>297</y>
+       <width>10</width>
+       <height>10</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">min-width: 8px; min-height: 8px;max-width:8px; max-height: 8px;border-radius: 5px;  border:1px solid black;background:black</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="Diod" name="korrled_2">
+     <property name="geometry">
+      <rect>
+       <x>335</x>
+       <y>297</y>
+       <width>10</width>
+       <height>10</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">min-width: 8px; min-height: 8px;max-width:8px; max-height: 8px;border-radius: 5px;  border:1px solid black;background:black</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="Diod" name="arvarpled_2">
+     <property name="geometry">
+      <rect>
+       <x>275</x>
+       <y>297</y>
+       <width>10</width>
+       <height>10</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">min-width: 8px; min-height: 8px;max-width:8px; max-height: 8px;border-radius: 5px;  border:1px solid black;background:black</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="Diod" name="manevrled_2">
+     <property name="geometry">
+      <rect>
+       <x>215</x>
+       <y>297</y>
+       <width>10</width>
+       <height>10</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">min-width: 8px; min-height: 8px;max-width:8px; max-height: 8px;border-radius: 5px;  border:1px solid black;background:black</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="Diod" name="rtsled_2">
+     <property name="geometry">
+      <rect>
+       <x>155</x>
+       <y>297</y>
+       <width>10</width>
+       <height>10</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">min-width: 8px; min-height: 8px;max-width:8px; max-height: 8px;border-radius: 5px;  border:1px solid black;background:black</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="Diod" name="tzadled_2">
+     <property name="geometry">
+      <rect>
+       <x>95</x>
+       <y>297</y>
+       <width>10</width>
+       <height>10</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">min-width: 8px; min-height: 8px;max-width:8px; max-height: 8px;border-radius: 5px;  border:1px solid black;background:black</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="Diod" name="navled_2">
+     <property name="geometry">
+      <rect>
+       <x>35</x>
+       <y>297</y>
+       <width>10</width>
+       <height>10</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">min-width: 8px; min-height: 8px;max-width:8px; max-height: 8px;border-radius: 5px;  border:1px solid black;background:black</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="Diod" name="mastermfpuled_2">
+     <property name="geometry">
+      <rect>
+       <x>64</x>
+       <y>482</y>
+       <width>10</width>
+       <height>10</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">min-width: 8px; min-height: 8px;max-width:8px; max-height: 8px;border-radius: 5px;  border:1px solid black;background:black</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="Diod" name="infbksled_2">
+     <property name="geometry">
+      <rect>
+       <x>118</x>
+       <y>482</y>
+       <width>10</width>
+       <height>10</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">min-width: 8px; min-height: 8px;max-width:8px; max-height: 8px;border-radius: 5px;  border:1px solid black;background:black</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="Diod" name="engled_2">
+     <property name="geometry">
+      <rect>
+       <x>172</x>
+       <y>482</y>
+       <width>10</width>
+       <height>10</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">min-width: 8px; min-height: 8px;max-width:8px; max-height: 8px;border-radius: 5px;  border:1px solid black;background:black</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="Diod" name="iipeled_2">
+     <property name="geometry">
+      <rect>
+       <x>64</x>
+       <y>542</y>
+       <width>10</width>
+       <height>10</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">min-width: 8px; min-height: 8px;max-width:8px; max-height: 8px;border-radius: 5px;  border:1px solid black;background:black</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="Diod" name="cyfrled_2">
+     <property name="geometry">
+      <rect>
+       <x>172</x>
+       <y>542</y>
+       <width>10</width>
+       <height>10</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">min-width: 8px; min-height: 8px;max-width:8px; max-height: 8px;border-radius: 5px;  border:1px solid black;background:black</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="MyButton" name="brplus_2">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>476</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>+</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="brminus_2">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>516</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>-</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="play_mfpu2">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>620</y>
+      <width>443</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>443</width>
+      <height>100</height>
+     </size>
+    </property>
+    <property name="title">
+     <string>Управление воспроизведением МФПУ ШН</string>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_3">
+     <item row="0" column="0" colspan="4">
+      <widget class="QSlider" name="step_mfpu2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="MyButton" name="mfpu2_play">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="3">
+      <widget class="MyButton" name="next_2">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0" colspan="4">
+      <widget class="QLabel" name="progress_2">
+       <property name="text">
+        <string>../..</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="MyButton" name="back_2">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="MyButton" name="mfpu2_pause">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="mfpu3" native="true">
+    <property name="geometry">
+     <rect>
+      <x>910</x>
+      <y>10</y>
+      <width>443</width>
+      <height>598</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>443</width>
+      <height>614</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(:/pult.PNG);</string>
+    </property>
+    <widget class="MyButton" name="kvs1l_3">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>64</y>
+       <width>32</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="MyButton" name="kvs2l_3">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>109</y>
+       <width>32</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="MyButton" name="kvs3l_3">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>154</y>
+       <width>32</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="MyButton" name="kvs4l_3">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>199</y>
+       <width>32</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="MyButton" name="kvs5l_3">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>244</y>
+       <width>32</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="MyButton" name="kvs1r_3">
+     <property name="geometry">
+      <rect>
+       <x>405</x>
+       <y>64</y>
+       <width>32</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="MyButton" name="kvs2r_3">
+     <property name="geometry">
+      <rect>
+       <x>405</x>
+       <y>109</y>
+       <width>32</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="MyButton" name="kvs3r_3">
+     <property name="geometry">
+      <rect>
+       <x>405</x>
+       <y>154</y>
+       <width>32</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="MyButton" name="kvs4r_3">
+     <property name="geometry">
+      <rect>
+       <x>405</x>
+       <y>199</y>
+       <width>32</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="MyButton" name="kvs5r_3">
+     <property name="geometry">
+      <rect>
+       <x>405</x>
+       <y>244</y>
+       <width>32</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="MyButton" name="PlanPol_3">
+     <property name="geometry">
+      <rect>
+       <x>13</x>
+       <y>20</y>
+       <width>57</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>ПЛАН
+ПОЛ</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="VypPol_3">
+     <property name="geometry">
+      <rect>
+       <x>73</x>
+       <y>20</y>
+       <width>57</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>ВЫП
+ПОЛ</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="PryamoNA_3">
+     <property name="geometry">
+      <rect>
+       <x>133</x>
+       <y>20</y>
+       <width>57</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>ПРЯМО
+НА</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="da19_3">
+     <property name="geometry">
+      <rect>
+       <x>194</x>
+       <y>20</y>
+       <width>57</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>19</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="SUO_3">
+     <property name="geometry">
+      <rect>
+       <x>254</x>
+       <y>20</y>
+       <width>57</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>СУО</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="BASU_3">
+     <property name="geometry">
+      <rect>
+       <x>314</x>
+       <y>20</y>
+       <width>57</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>БАСУ</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="PolDann_3">
+     <property name="geometry">
+      <rect>
+       <x>374</x>
+       <y>20</y>
+       <width>57</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>ПОЛ
+ДАНН</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="Maneur_3">
+     <property name="geometry">
+      <rect>
+       <x>194</x>
+       <y>310</y>
+       <width>57</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>МА
+НЕВР</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="RTS_3">
+     <property name="geometry">
+      <rect>
+       <x>133</x>
+       <y>310</y>
+       <width>57</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>РТС</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="KORR_3">
+     <property name="geometry">
+      <rect>
+       <x>314</x>
+       <y>310</y>
+       <width>57</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>КОРР</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="NAV_3">
+     <property name="geometry">
+      <rect>
+       <x>13</x>
+       <y>310</y>
+       <width>57</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>НАВ</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="ISP_3">
+     <property name="geometry">
+      <rect>
+       <x>374</x>
+       <y>310</y>
+       <width>57</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>ИСП</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="Tzad_3">
+     <property name="geometry">
+      <rect>
+       <x>73</x>
+       <y>310</y>
+       <width>57</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>Тзад</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="ArvArp_3">
+     <property name="geometry">
+      <rect>
+       <x>254</x>
+       <y>310</y>
+       <width>57</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>АРВ
+АРП</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="UprMFPU_3">
+     <property name="geometry">
+      <rect>
+       <x>44</x>
+       <y>496</y>
+       <width>50</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>УПР
+МФПУ</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="InfBKS_3">
+     <property name="geometry">
+      <rect>
+       <x>98</x>
+       <y>496</y>
+       <width>50</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>ИНФ
+БКС</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="ENG_3">
+     <property name="geometry">
+      <rect>
+       <x>152</x>
+       <y>496</y>
+       <width>50</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>ENG</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="CIFR_3">
+     <property name="geometry">
+      <rect>
+       <x>152</x>
+       <y>556</y>
+       <width>50</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>ЦИФР</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="empty_3">
+     <property name="geometry">
+      <rect>
+       <x>98</x>
+       <y>556</y>
+       <width>50</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>НАЗВ
+СТР</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="IIPE_3">
+     <property name="geometry">
+      <rect>
+       <x>44</x>
+       <y>556</y>
+       <width>50</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>ИИПЭ</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="q_3">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>350</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>Q
+     Й</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="a_3">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>390</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="acceptDrops">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>A
+     Ф</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="z_3">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>430</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>Z
+     Я</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="x_3">
+     <property name="geometry">
+      <rect>
+       <x>45</x>
+       <y>430</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>X
+     Ч</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="w_3">
+     <property name="geometry">
+      <rect>
+       <x>45</x>
+       <y>350</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>W
+     Ц</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="s_3">
+     <property name="geometry">
+      <rect>
+       <x>45</x>
+       <y>390</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>S
+     Ы</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="e_3">
+     <property name="geometry">
+      <rect>
+       <x>85</x>
+       <y>350</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>E
+     У</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="d_3">
+     <property name="geometry">
+      <rect>
+       <x>85</x>
+       <y>390</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>D
+     В</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="c_3">
+     <property name="geometry">
+      <rect>
+       <x>85</x>
+       <y>430</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>C
+     С</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="v_3">
+     <property name="geometry">
+      <rect>
+       <x>125</x>
+       <y>430</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>V
+     М</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="y_3">
+     <property name="geometry">
+      <rect>
+       <x>205</x>
+       <y>350</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>Y
+     Н</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="r_3">
+     <property name="geometry">
+      <rect>
+       <x>125</x>
+       <y>350</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>R
+     К</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="t_3">
+     <property name="geometry">
+      <rect>
+       <x>165</x>
+       <y>350</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>T
+     Е</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="g_3">
+     <property name="geometry">
+      <rect>
+       <x>165</x>
+       <y>390</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>G
+     П</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="n_3">
+     <property name="geometry">
+      <rect>
+       <x>205</x>
+       <y>430</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>N
+     Т</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="f_3">
+     <property name="geometry">
+      <rect>
+       <x>125</x>
+       <y>390</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>F
+     А</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="h_3">
+     <property name="geometry">
+      <rect>
+       <x>205</x>
+       <y>390</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>H
+     Р</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="b_3">
+     <property name="geometry">
+      <rect>
+       <x>165</x>
+       <y>430</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>B
+     И</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="ruG_3">
+     <property name="geometry">
+      <rect>
+       <x>365</x>
+       <y>390</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>
+     Ж</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="m_3">
+     <property name="geometry">
+      <rect>
+       <x>245</x>
+       <y>430</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>M
+     Ь</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="o_3">
+     <property name="geometry">
+      <rect>
+       <x>325</x>
+       <y>350</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>O
+     Щ</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="p_3">
+     <property name="geometry">
+      <rect>
+       <x>365</x>
+       <y>350</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>P
+     З</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="u_3">
+     <property name="geometry">
+      <rect>
+       <x>245</x>
+       <y>350</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>U
+     Г</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="i_3">
+     <property name="geometry">
+      <rect>
+       <x>285</x>
+       <y>350</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>I
+     Ш</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="ruA_3">
+     <property name="geometry">
+      <rect>
+       <x>405</x>
+       <y>390</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>
+     Э</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="vvd_3">
+     <property name="geometry">
+      <rect>
+       <x>405</x>
+       <y>430</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>ВВД</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="k_3">
+     <property name="geometry">
+      <rect>
+       <x>285</x>
+       <y>390</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>K
+     Л</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="ruTznak_3">
+     <property name="geometry">
+      <rect>
+       <x>365</x>
+       <y>430</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>/
+     Ъ</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="ruU_3">
+     <property name="geometry">
+      <rect>
+       <x>325</x>
+       <y>430</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>.
+     Ю</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="j_3">
+     <property name="geometry">
+      <rect>
+       <x>245</x>
+       <y>390</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>J
+     О</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="ruX_3">
+     <property name="geometry">
+      <rect>
+       <x>405</x>
+       <y>350</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string> 
+     Х</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="l_3">
+     <property name="geometry">
+      <rect>
+       <x>325</x>
+       <y>390</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>L
+     Д</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="ruB_3">
+     <property name="geometry">
+      <rect>
+       <x>285</x>
+       <y>430</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>,
+     Б</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="three_3">
+     <property name="geometry">
+      <rect>
+       <x>325</x>
+       <y>474</y>
+       <width>37</width>
+       <height>37</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>3</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="seven_3">
+     <property name="geometry">
+      <rect>
+       <x>245</x>
+       <y>554</y>
+       <width>37</width>
+       <height>37</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>7</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="zero_3">
+     <property name="geometry">
+      <rect>
+       <x>205</x>
+       <y>474</y>
+       <width>37</width>
+       <height>37</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="six_3">
+     <property name="geometry">
+      <rect>
+       <x>325</x>
+       <y>514</y>
+       <width>37</width>
+       <height>37</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>6</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="four_3">
+     <property name="geometry">
+      <rect>
+       <x>245</x>
+       <y>514</y>
+       <width>37</width>
+       <height>37</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>4</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="PlusMinus_3">
+     <property name="geometry">
+      <rect>
+       <x>205</x>
+       <y>514</y>
+       <width>37</width>
+       <height>37</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>±</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="five_3">
+     <property name="geometry">
+      <rect>
+       <x>285</x>
+       <y>514</y>
+       <width>37</width>
+       <height>37</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>5</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="eight_3">
+     <property name="geometry">
+      <rect>
+       <x>285</x>
+       <y>554</y>
+       <width>37</width>
+       <height>37</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>8</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="two_3">
+     <property name="geometry">
+      <rect>
+       <x>285</x>
+       <y>474</y>
+       <width>37</width>
+       <height>37</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>2</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="nine_3">
+     <property name="geometry">
+      <rect>
+       <x>325</x>
+       <y>554</y>
+       <width>37</width>
+       <height>37</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>9</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="_2">
+     <property name="geometry">
+      <rect>
+       <x>205</x>
+       <y>554</y>
+       <width>37</width>
+       <height>37</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>_</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="one_3">
+     <property name="geometry">
+      <rect>
+       <x>245</x>
+       <y>474</y>
+       <width>37</width>
+       <height>37</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>1</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="clear_3">
+     <property name="geometry">
+      <rect>
+       <x>375</x>
+       <y>477</y>
+       <width>57</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>СТИР</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="menu_4">
+     <property name="geometry">
+      <rect>
+       <x>375</x>
+       <y>517</y>
+       <width>57</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>МЕНЮ</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="sbros_3">
+     <property name="geometry">
+      <rect>
+       <x>375</x>
+       <y>557</y>
+       <width>36</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>СБР</string>
+     </property>
+    </widget>
+    <widget class="LCDDisplay" name="openGLWidget_3">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>60</y>
+       <width>341</width>
+       <height>231</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="Diod" name="planpolled_3">
+     <property name="geometry">
+      <rect>
+       <x>35</x>
+       <y>7</y>
+       <width>10</width>
+       <height>10</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">min-width: 8px; min-height: 8px;max-width:8px; max-height: 8px;border-radius: 5px;  border:1px solid black;background:black</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="Diod" name="vyppolled_3">
+     <property name="geometry">
+      <rect>
+       <x>95</x>
+       <y>7</y>
+       <width>10</width>
+       <height>10</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">min-width: 8px; min-height: 8px;max-width:8px; max-height: 8px;border-radius: 5px;  border:1px solid black;background:black</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="Diod" name="prymonaled_3">
+     <property name="geometry">
+      <rect>
+       <x>155</x>
+       <y>7</y>
+       <width>10</width>
+       <height>10</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">min-width: 8px; min-height: 8px;max-width:8px; max-height: 8px;border-radius: 5px;  border:1px solid black;background:black</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="Diod" name="led19_3">
+     <property name="geometry">
+      <rect>
+       <x>215</x>
+       <y>7</y>
+       <width>10</width>
+       <height>10</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">min-width: 8px; min-height: 8px;max-width:8px; max-height: 8px;border-radius: 5px;  border:1px solid black;background:black</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="Diod" name="suoled_3">
+     <property name="geometry">
+      <rect>
+       <x>275</x>
+       <y>7</y>
+       <width>10</width>
+       <height>10</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">min-width: 8px; min-height: 8px;max-width:8px; max-height: 8px;border-radius: 5px;  border:1px solid black;background:black</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="Diod" name="basuled_3">
+     <property name="geometry">
+      <rect>
+       <x>335</x>
+       <y>7</y>
+       <width>10</width>
+       <height>10</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">min-width: 8px; min-height: 8px;max-width:8px; max-height: 8px;border-radius: 5px;  border:1px solid black;background:black</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="Diod" name="poldanled_3">
+     <property name="geometry">
+      <rect>
+       <x>395</x>
+       <y>7</y>
+       <width>10</width>
+       <height>10</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">min-width: 8px; min-height: 8px;max-width:8px; max-height: 8px;border-radius: 5px;  border:1px solid black;background:black</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="Diod" name="ispled_3">
+     <property name="geometry">
+      <rect>
+       <x>395</x>
+       <y>297</y>
+       <width>10</width>
+       <height>10</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">min-width: 8px; min-height: 8px;max-width:8px; max-height: 8px;border-radius: 5px;  border:1px solid black;background:black</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="Diod" name="korrled_3">
+     <property name="geometry">
+      <rect>
+       <x>335</x>
+       <y>297</y>
+       <width>10</width>
+       <height>10</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">min-width: 8px; min-height: 8px;max-width:8px; max-height: 8px;border-radius: 5px;  border:1px solid black;background:black</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="Diod" name="arvarpled_3">
+     <property name="geometry">
+      <rect>
+       <x>275</x>
+       <y>297</y>
+       <width>10</width>
+       <height>10</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">min-width: 8px; min-height: 8px;max-width:8px; max-height: 8px;border-radius: 5px;  border:1px solid black;background:black</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="Diod" name="manevrled_3">
+     <property name="geometry">
+      <rect>
+       <x>215</x>
+       <y>297</y>
+       <width>10</width>
+       <height>10</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">min-width: 8px; min-height: 8px;max-width:8px; max-height: 8px;border-radius: 5px;  border:1px solid black;background:black</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="Diod" name="rtsled_3">
+     <property name="geometry">
+      <rect>
+       <x>155</x>
+       <y>297</y>
+       <width>10</width>
+       <height>10</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">min-width: 8px; min-height: 8px;max-width:8px; max-height: 8px;border-radius: 5px;  border:1px solid black;background:black</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="Diod" name="tzadled_3">
+     <property name="geometry">
+      <rect>
+       <x>95</x>
+       <y>297</y>
+       <width>10</width>
+       <height>10</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">min-width: 8px; min-height: 8px;max-width:8px; max-height: 8px;border-radius: 5px;  border:1px solid black;background:black</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="Diod" name="navled_3">
+     <property name="geometry">
+      <rect>
+       <x>35</x>
+       <y>297</y>
+       <width>10</width>
+       <height>10</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">min-width: 8px; min-height: 8px;max-width:8px; max-height: 8px;border-radius: 5px;  border:1px solid black;background:black</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="Diod" name="mastermfpuled_3">
+     <property name="geometry">
+      <rect>
+       <x>64</x>
+       <y>482</y>
+       <width>10</width>
+       <height>10</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">min-width: 8px; min-height: 8px;max-width:8px; max-height: 8px;border-radius: 5px;  border:1px solid black;background:black</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="Diod" name="infbksled_3">
+     <property name="geometry">
+      <rect>
+       <x>118</x>
+       <y>482</y>
+       <width>10</width>
+       <height>10</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">min-width: 8px; min-height: 8px;max-width:8px; max-height: 8px;border-radius: 5px;  border:1px solid black;background:black</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="Diod" name="engled_3">
+     <property name="geometry">
+      <rect>
+       <x>172</x>
+       <y>482</y>
+       <width>10</width>
+       <height>10</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">min-width: 8px; min-height: 8px;max-width:8px; max-height: 8px;border-radius: 5px;  border:1px solid black;background:black</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="Diod" name="iipeled_3">
+     <property name="geometry">
+      <rect>
+       <x>64</x>
+       <y>542</y>
+       <width>10</width>
+       <height>10</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">min-width: 8px; min-height: 8px;max-width:8px; max-height: 8px;border-radius: 5px;  border:1px solid black;background:black</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="Diod" name="cyfrled_3">
+     <property name="geometry">
+      <rect>
+       <x>172</x>
+       <y>542</y>
+       <width>10</width>
+       <height>10</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">min-width: 8px; min-height: 8px;max-width:8px; max-height: 8px;border-radius: 5px;  border:1px solid black;background:black</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="MyButton" name="brplus_3">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>476</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>+</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="brminus_3">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>516</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>-</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="play_mfpu3">
+    <property name="geometry">
+     <rect>
+      <x>910</x>
+      <y>620</y>
+      <width>443</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>443</width>
+      <height>100</height>
+     </size>
+    </property>
+    <property name="title">
+     <string>Управление воспроизведением МФПУ ШО</string>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_4">
+     <item row="1" column="0" colspan="4">
+      <widget class="QLabel" name="progress_3">
+       <property name="text">
+        <string>../..</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="MyButton" name="back_3">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0" colspan="4">
+      <widget class="QSlider" name="step_mfpu3">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="3">
+      <widget class="MyButton" name="next_3">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="MyButton" name="mfpu3_play">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="MyButton" name="mfpu3_pause">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QGroupBox" name="play_mfpu1">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>620</y>
+      <width>441</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>443</width>
+      <height>100</height>
+     </size>
+    </property>
+    <property name="title">
+     <string>Управление воспроизведением МФПУ КК</string>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="1" column="0" colspan="4">
+      <widget class="QLabel" name="progress">
+       <property name="text">
+        <string>../..</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="MyButton" name="mfpu1_play">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="MyButton" name="back">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="3">
+      <widget class="MyButton" name="next">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0" colspan="4">
+      <widget class="QSlider" name="step_mfpu1">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="tickPosition">
+        <enum>QSlider::TicksAbove</enum>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="MyButton" name="mfpu1_pause">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="mfpu1" native="true">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>443</width>
+      <height>598</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>443</width>
+      <height>614</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(:/pult.PNG);</string>
+    </property>
+    <widget class="MyButton" name="kvs1l">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>64</y>
+       <width>32</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="MyButton" name="kvs2l">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>109</y>
+       <width>32</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="MyButton" name="kvs3l">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>154</y>
+       <width>32</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="MyButton" name="kvs4l">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>199</y>
+       <width>32</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="MyButton" name="kvs5l">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>244</y>
+       <width>32</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="MyButton" name="kvs1r">
+     <property name="geometry">
+      <rect>
+       <x>405</x>
+       <y>64</y>
+       <width>32</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="MyButton" name="kvs2r">
+     <property name="geometry">
+      <rect>
+       <x>405</x>
+       <y>109</y>
+       <width>32</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="MyButton" name="kvs3r">
+     <property name="geometry">
+      <rect>
+       <x>405</x>
+       <y>154</y>
+       <width>32</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="MyButton" name="kvs4r">
+     <property name="geometry">
+      <rect>
+       <x>405</x>
+       <y>199</y>
+       <width>32</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="MyButton" name="kvs5r">
+     <property name="geometry">
+      <rect>
+       <x>405</x>
+       <y>244</y>
+       <width>32</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="MyButton" name="PlanPol">
+     <property name="geometry">
+      <rect>
+       <x>13</x>
+       <y>20</y>
+       <width>57</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}
+
+</string>
+     </property>
+     <property name="text">
+      <string>ПЛАН
+ПОЛ</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="VypPol">
+     <property name="geometry">
+      <rect>
+       <x>73</x>
+       <y>20</y>
+       <width>57</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>ВЫП
+ПОЛ</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="PryamoNA">
+     <property name="geometry">
+      <rect>
+       <x>133</x>
+       <y>20</y>
+       <width>57</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>ПРЯМО
+НА</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="da19">
+     <property name="geometry">
+      <rect>
+       <x>194</x>
+       <y>20</y>
+       <width>57</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>19</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="SUO">
+     <property name="geometry">
+      <rect>
+       <x>254</x>
+       <y>20</y>
+       <width>57</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>СУО</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="BASU">
+     <property name="geometry">
+      <rect>
+       <x>314</x>
+       <y>20</y>
+       <width>57</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>БАСУ</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="PolDann">
+     <property name="geometry">
+      <rect>
+       <x>374</x>
+       <y>20</y>
+       <width>57</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>ПОЛ
+ДАНН</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="Maneur">
+     <property name="geometry">
+      <rect>
+       <x>194</x>
+       <y>310</y>
+       <width>57</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>МА
+НЕВР</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="RTS">
+     <property name="geometry">
+      <rect>
+       <x>133</x>
+       <y>310</y>
+       <width>57</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>РТС</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="KORR">
+     <property name="geometry">
+      <rect>
+       <x>314</x>
+       <y>310</y>
+       <width>57</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>КОРР</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="NAV">
+     <property name="geometry">
+      <rect>
+       <x>13</x>
+       <y>310</y>
+       <width>57</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>НАВ</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="ISP">
+     <property name="geometry">
+      <rect>
+       <x>374</x>
+       <y>310</y>
+       <width>57</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>ИСП</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="Tzad">
+     <property name="geometry">
+      <rect>
+       <x>73</x>
+       <y>310</y>
+       <width>57</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>Тзад</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="ArvArp">
+     <property name="geometry">
+      <rect>
+       <x>254</x>
+       <y>310</y>
+       <width>57</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>АРВ
+АРП</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="UprMFPU">
+     <property name="geometry">
+      <rect>
+       <x>44</x>
+       <y>496</y>
+       <width>50</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>УПР
+МФПУ</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="InfBKS">
+     <property name="geometry">
+      <rect>
+       <x>98</x>
+       <y>496</y>
+       <width>50</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>ИНФ
+БКС</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="ENG">
+     <property name="geometry">
+      <rect>
+       <x>152</x>
+       <y>496</y>
+       <width>50</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>ENG</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="CIFR">
+     <property name="geometry">
+      <rect>
+       <x>152</x>
+       <y>556</y>
+       <width>50</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>ЦИФР</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="empty">
+     <property name="geometry">
+      <rect>
+       <x>98</x>
+       <y>556</y>
+       <width>50</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>НАЗВ
+СТР</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="IIPE">
+     <property name="geometry">
+      <rect>
+       <x>44</x>
+       <y>556</y>
+       <width>50</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>ИИПЭ</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="q">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>350</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>Q
+     Й</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="a">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>390</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="acceptDrops">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>A
+     Ф</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="z">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>430</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>Z
+     Я</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="x">
+     <property name="geometry">
+      <rect>
+       <x>45</x>
+       <y>430</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>X
+     Ч</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="w">
+     <property name="geometry">
+      <rect>
+       <x>45</x>
+       <y>350</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>W
+     Ц</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="s">
+     <property name="geometry">
+      <rect>
+       <x>45</x>
+       <y>390</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>S
+     Ы</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="e">
+     <property name="geometry">
+      <rect>
+       <x>85</x>
+       <y>350</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>E
+     У</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="d">
+     <property name="geometry">
+      <rect>
+       <x>85</x>
+       <y>390</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>D
+     В</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="c">
+     <property name="geometry">
+      <rect>
+       <x>85</x>
+       <y>430</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>C
+     С</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="v">
+     <property name="geometry">
+      <rect>
+       <x>125</x>
+       <y>430</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>V
+     М</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="y">
+     <property name="geometry">
+      <rect>
+       <x>205</x>
+       <y>350</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>Y
+     Н</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="r">
+     <property name="geometry">
+      <rect>
+       <x>125</x>
+       <y>350</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>R
+     К</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="t">
+     <property name="geometry">
+      <rect>
+       <x>165</x>
+       <y>350</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>T
+     Е</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="g">
+     <property name="geometry">
+      <rect>
+       <x>165</x>
+       <y>390</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>G
+     П</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="n">
+     <property name="geometry">
+      <rect>
+       <x>205</x>
+       <y>430</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>N
+     Т</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="f">
+     <property name="geometry">
+      <rect>
+       <x>125</x>
+       <y>390</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>F
+     А</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="h">
+     <property name="geometry">
+      <rect>
+       <x>205</x>
+       <y>390</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>H
+     Р</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="b">
+     <property name="geometry">
+      <rect>
+       <x>165</x>
+       <y>430</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>B
+     И</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="ruG">
+     <property name="geometry">
+      <rect>
+       <x>365</x>
+       <y>390</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>
+     Ж</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="m">
+     <property name="geometry">
+      <rect>
+       <x>245</x>
+       <y>430</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>M
+     Ь</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="o">
+     <property name="geometry">
+      <rect>
+       <x>325</x>
+       <y>350</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>O
+     Щ</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="p">
+     <property name="geometry">
+      <rect>
+       <x>365</x>
+       <y>350</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>P
+     З</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="u">
+     <property name="geometry">
+      <rect>
+       <x>245</x>
+       <y>350</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>U
+     Г</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="i">
+     <property name="geometry">
+      <rect>
+       <x>285</x>
+       <y>350</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>I
+     Ш</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="ruA">
+     <property name="geometry">
+      <rect>
+       <x>405</x>
+       <y>390</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>
+     Э</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="vvd">
+     <property name="geometry">
+      <rect>
+       <x>405</x>
+       <y>430</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>ВВД</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="k">
+     <property name="geometry">
+      <rect>
+       <x>285</x>
+       <y>390</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>K
+     Л</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="ruTznak">
+     <property name="geometry">
+      <rect>
+       <x>365</x>
+       <y>430</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>/
+     Ъ</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="ruU">
+     <property name="geometry">
+      <rect>
+       <x>325</x>
+       <y>430</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>.
+     Ю</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="j">
+     <property name="geometry">
+      <rect>
+       <x>245</x>
+       <y>390</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>J
+     О</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="ruX">
+     <property name="geometry">
+      <rect>
+       <x>405</x>
+       <y>350</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string> 
+     Х</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="l">
+     <property name="geometry">
+      <rect>
+       <x>325</x>
+       <y>390</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>L
+     Д</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="ruB">
+     <property name="geometry">
+      <rect>
+       <x>285</x>
+       <y>430</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>,
+     Б</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="three">
+     <property name="geometry">
+      <rect>
+       <x>325</x>
+       <y>474</y>
+       <width>37</width>
+       <height>37</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>3</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="seven">
+     <property name="geometry">
+      <rect>
+       <x>245</x>
+       <y>554</y>
+       <width>37</width>
+       <height>37</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>7</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="zero">
+     <property name="geometry">
+      <rect>
+       <x>205</x>
+       <y>474</y>
+       <width>37</width>
+       <height>37</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="six">
+     <property name="geometry">
+      <rect>
+       <x>325</x>
+       <y>514</y>
+       <width>37</width>
+       <height>37</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>6</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="four">
+     <property name="geometry">
+      <rect>
+       <x>245</x>
+       <y>514</y>
+       <width>37</width>
+       <height>37</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>4</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="PlusMinus">
+     <property name="geometry">
+      <rect>
+       <x>205</x>
+       <y>514</y>
+       <width>37</width>
+       <height>37</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>±</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="five">
+     <property name="geometry">
+      <rect>
+       <x>285</x>
+       <y>514</y>
+       <width>37</width>
+       <height>37</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>5</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="eight">
+     <property name="geometry">
+      <rect>
+       <x>285</x>
+       <y>554</y>
+       <width>37</width>
+       <height>37</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>8</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="two">
+     <property name="geometry">
+      <rect>
+       <x>285</x>
+       <y>474</y>
+       <width>37</width>
+       <height>37</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>2</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="nine">
+     <property name="geometry">
+      <rect>
+       <x>325</x>
+       <y>554</y>
+       <width>37</width>
+       <height>37</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>9</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="_">
+     <property name="geometry">
+      <rect>
+       <x>205</x>
+       <y>554</y>
+       <width>37</width>
+       <height>37</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>_</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="one">
+     <property name="geometry">
+      <rect>
+       <x>245</x>
+       <y>474</y>
+       <width>37</width>
+       <height>37</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>1</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="clear">
+     <property name="geometry">
+      <rect>
+       <x>375</x>
+       <y>477</y>
+       <width>57</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>СТИР</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="menu">
+     <property name="geometry">
+      <rect>
+       <x>375</x>
+       <y>517</y>
+       <width>57</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>МЕНЮ</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="sbros">
+     <property name="geometry">
+      <rect>
+       <x>375</x>
+       <y>557</y>
+       <width>36</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>СБР</string>
+     </property>
+    </widget>
+    <widget class="LCDDisplay" name="openGLWidget">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>60</y>
+       <width>341</width>
+       <height>231</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background: black</string>
+     </property>
+    </widget>
+    <widget class="Diod" name="planpolled">
+     <property name="geometry">
+      <rect>
+       <x>35</x>
+       <y>7</y>
+       <width>10</width>
+       <height>10</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">min-width: 8px; min-height: 8px;max-width:8px; max-height: 8px;border-radius: 5px;  border:1px solid black;background:black</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="Diod" name="vyppolled">
+     <property name="geometry">
+      <rect>
+       <x>95</x>
+       <y>7</y>
+       <width>10</width>
+       <height>10</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">min-width: 8px; min-height: 8px;max-width:8px; max-height: 8px;border-radius: 5px;  border:1px solid black;background:black</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="Diod" name="prymonaled">
+     <property name="geometry">
+      <rect>
+       <x>155</x>
+       <y>7</y>
+       <width>10</width>
+       <height>10</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">min-width: 8px; min-height: 8px;max-width:8px; max-height: 8px;border-radius: 5px;  border:1px solid black;background:black</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="Diod" name="led19">
+     <property name="geometry">
+      <rect>
+       <x>215</x>
+       <y>7</y>
+       <width>10</width>
+       <height>10</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">min-width: 8px; min-height: 8px;max-width:8px; max-height: 8px;border-radius: 5px;  border:1px solid black;background:black</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="Diod" name="suoled">
+     <property name="geometry">
+      <rect>
+       <x>275</x>
+       <y>7</y>
+       <width>10</width>
+       <height>10</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">min-width: 8px; min-height: 8px;max-width:8px; max-height: 8px;border-radius: 5px;  border:1px solid black;background:black</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="Diod" name="basuled">
+     <property name="geometry">
+      <rect>
+       <x>335</x>
+       <y>7</y>
+       <width>10</width>
+       <height>10</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">min-width: 8px; min-height: 8px;max-width:8px; max-height: 8px;border-radius: 5px;  border:1px solid black;background:black</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="Diod" name="poldanled">
+     <property name="geometry">
+      <rect>
+       <x>395</x>
+       <y>7</y>
+       <width>10</width>
+       <height>10</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">min-width: 8px; min-height: 8px;max-width:8px; max-height: 8px;border-radius: 5px;  border:1px solid black;background:black</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="Diod" name="ispled">
+     <property name="geometry">
+      <rect>
+       <x>395</x>
+       <y>297</y>
+       <width>10</width>
+       <height>10</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">min-width: 8px; min-height: 8px;max-width:8px; max-height: 8px;border-radius: 5px;  border:1px solid black;background:black</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="Diod" name="korrled">
+     <property name="geometry">
+      <rect>
+       <x>335</x>
+       <y>297</y>
+       <width>10</width>
+       <height>10</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">min-width: 8px; min-height: 8px;max-width:8px; max-height: 8px;border-radius: 5px;  border:1px solid black;background:black</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="Diod" name="arvarpled">
+     <property name="geometry">
+      <rect>
+       <x>275</x>
+       <y>297</y>
+       <width>10</width>
+       <height>10</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">min-width: 8px; min-height: 8px;max-width:8px; max-height: 8px;border-radius: 5px;  border:1px solid black;background:black</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="Diod" name="manevrled">
+     <property name="geometry">
+      <rect>
+       <x>215</x>
+       <y>297</y>
+       <width>10</width>
+       <height>10</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">min-width: 8px; min-height: 8px;max-width:8px; max-height: 8px;border-radius: 5px;  border:1px solid black;background:black</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="Diod" name="rtsled">
+     <property name="geometry">
+      <rect>
+       <x>155</x>
+       <y>297</y>
+       <width>10</width>
+       <height>10</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">min-width: 8px; min-height: 8px;max-width:8px; max-height: 8px;border-radius: 5px;  border:1px solid black;background:black</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="Diod" name="tzadled">
+     <property name="geometry">
+      <rect>
+       <x>95</x>
+       <y>297</y>
+       <width>10</width>
+       <height>10</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">min-width: 8px; min-height: 8px;max-width:8px; max-height: 8px;border-radius: 5px;  border:1px solid black;background:black</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="Diod" name="navled">
+     <property name="geometry">
+      <rect>
+       <x>35</x>
+       <y>297</y>
+       <width>10</width>
+       <height>10</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">min-width: 8px; min-height: 8px;max-width:8px; max-height: 8px;border-radius: 5px;  border:1px solid black;background:black</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="Diod" name="mastermfpuled">
+     <property name="geometry">
+      <rect>
+       <x>64</x>
+       <y>482</y>
+       <width>10</width>
+       <height>10</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">min-width: 8px; min-height: 8px;max-width:8px; max-height: 8px;border-radius: 5px;  border:1px solid black;background:black</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="Diod" name="infbksled">
+     <property name="geometry">
+      <rect>
+       <x>118</x>
+       <y>482</y>
+       <width>10</width>
+       <height>10</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">min-width: 8px; min-height: 8px;max-width:8px; max-height: 8px;border-radius: 5px;  border:1px solid black;background:black</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="Diod" name="engled">
+     <property name="geometry">
+      <rect>
+       <x>172</x>
+       <y>482</y>
+       <width>10</width>
+       <height>10</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">min-width: 8px; min-height: 8px;max-width:8px; max-height: 8px;border-radius: 5px;  border:1px solid black;background:black</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="Diod" name="iipeled">
+     <property name="geometry">
+      <rect>
+       <x>64</x>
+       <y>542</y>
+       <width>10</width>
+       <height>10</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">min-width: 8px; min-height: 8px;max-width:8px; max-height: 8px;border-radius: 5px;  border:1px solid black;background:black</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="Diod" name="cyfrled">
+     <property name="geometry">
+      <rect>
+       <x>172</x>
+       <y>542</y>
+       <width>10</width>
+       <height>10</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">min-width: 8px; min-height: 8px;max-width:8px; max-height: 8px;border-radius: 5px;  border:1px solid black;background:black</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="MyButton" name="brplus">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>476</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>+</string>
+     </property>
+    </widget>
+    <widget class="MyButton" name="brminus">
+     <property name="geometry">
+      <rect>
+       <x>5</x>
+       <y>516</y>
+       <width>36</width>
+       <height>36</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{color: white;background: black; border: 1px solid white;}
+QPushButton:hover{color: black;background: white;}</string>
+     </property>
+     <property name="text">
+      <string>-</string>
+     </property>
+    </widget>
+    <zorder>kvs1l</zorder>
+    <zorder>kvs2l</zorder>
+    <zorder>kvs3l</zorder>
+    <zorder>kvs4l</zorder>
+    <zorder>kvs5l</zorder>
+    <zorder>kvs1r</zorder>
+    <zorder>kvs2r</zorder>
+    <zorder>kvs3r</zorder>
+    <zorder>kvs4r</zorder>
+    <zorder>kvs5r</zorder>
+    <zorder>PlanPol</zorder>
+    <zorder>VypPol</zorder>
+    <zorder>PryamoNA</zorder>
+    <zorder>da19</zorder>
+    <zorder>SUO</zorder>
+    <zorder>BASU</zorder>
+    <zorder>PolDann</zorder>
+    <zorder>Maneur</zorder>
+    <zorder>RTS</zorder>
+    <zorder>KORR</zorder>
+    <zorder>NAV</zorder>
+    <zorder>ISP</zorder>
+    <zorder>Tzad</zorder>
+    <zorder>ArvArp</zorder>
+    <zorder>UprMFPU</zorder>
+    <zorder>InfBKS</zorder>
+    <zorder>ENG</zorder>
+    <zorder>CIFR</zorder>
+    <zorder>empty</zorder>
+    <zorder>IIPE</zorder>
+    <zorder>q</zorder>
+    <zorder>a</zorder>
+    <zorder>z</zorder>
+    <zorder>x</zorder>
+    <zorder>w</zorder>
+    <zorder>s</zorder>
+    <zorder>e</zorder>
+    <zorder>d</zorder>
+    <zorder>c</zorder>
+    <zorder>v</zorder>
+    <zorder>y</zorder>
+    <zorder>r</zorder>
+    <zorder>t</zorder>
+    <zorder>g</zorder>
+    <zorder>n</zorder>
+    <zorder>f</zorder>
+    <zorder>h</zorder>
+    <zorder>b</zorder>
+    <zorder>ruG</zorder>
+    <zorder>m</zorder>
+    <zorder>o</zorder>
+    <zorder>p</zorder>
+    <zorder>u</zorder>
+    <zorder>i</zorder>
+    <zorder>ruA</zorder>
+    <zorder>vvd</zorder>
+    <zorder>k</zorder>
+    <zorder>ruTznak</zorder>
+    <zorder>ruU</zorder>
+    <zorder>j</zorder>
+    <zorder>ruX</zorder>
+    <zorder>l</zorder>
+    <zorder>ruB</zorder>
+    <zorder>three</zorder>
+    <zorder>seven</zorder>
+    <zorder>zero</zorder>
+    <zorder>six</zorder>
+    <zorder>four</zorder>
+    <zorder>PlusMinus</zorder>
+    <zorder>five</zorder>
+    <zorder>eight</zorder>
+    <zorder>two</zorder>
+    <zorder>nine</zorder>
+    <zorder>_</zorder>
+    <zorder>one</zorder>
+    <zorder>clear</zorder>
+    <zorder>menu</zorder>
+    <zorder>sbros</zorder>
+    <zorder>planpolled</zorder>
+    <zorder>vyppolled</zorder>
+    <zorder>prymonaled</zorder>
+    <zorder>led19</zorder>
+    <zorder>suoled</zorder>
+    <zorder>basuled</zorder>
+    <zorder>poldanled</zorder>
+    <zorder>ispled</zorder>
+    <zorder>korrled</zorder>
+    <zorder>arvarpled</zorder>
+    <zorder>manevrled</zorder>
+    <zorder>rtsled</zorder>
+    <zorder>tzadled</zorder>
+    <zorder>navled</zorder>
+    <zorder>mastermfpuled</zorder>
+    <zorder>infbksled</zorder>
+    <zorder>engled</zorder>
+    <zorder>iipeled</zorder>
+    <zorder>cyfrled</zorder>
+    <zorder>brplus</zorder>
+    <zorder>brminus</zorder>
+    <zorder>openGLWidget</zorder>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1850</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>Файл</string>
+    </property>
+    <addaction name="open_sbi"/>
+    <addaction name="exit"/>
+    <addaction name="action_2"/>
+   </widget>
+   <widget class="QMenu" name="menu_5">
+    <property name="title">
+     <string>Помощь</string>
+    </property>
+    <addaction name="action_3"/>
+   </widget>
+   <widget class="QMenu" name="menu_6">
+    <property name="title">
+     <string>Инструменты</string>
+    </property>
+    <widget class="QMenu" name="menu_7">
+     <property name="title">
+      <string>Воспроизведение</string>
+     </property>
+     <addaction name="x1"/>
+     <addaction name="x2"/>
+     <addaction name="x4"/>
+     <addaction name="x8"/>
+     <addaction name="x16"/>
+     <addaction name="x25"/>
+    </widget>
+    <addaction name="action_4"/>
+    <addaction name="menu_7"/>
+   </widget>
+   <addaction name="menu_2"/>
+   <addaction name="menu_6"/>
+   <addaction name="menu_5"/>
+  </widget>
+  <action name="open_sbi">
+   <property name="text">
+    <string>Открыть</string>
+   </property>
+   <property name="toolTip">
+    <string>Чтение СБИ записи, полученной или через программу ЭА или через SBI_TOOL</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+A</string>
+   </property>
+  </action>
+  <action name="exit">
+   <property name="text">
+    <string>Выход</string>
+   </property>
+  </action>
+  <action name="filtr">
+   <property name="text">
+    <string>Фильтр страниц</string>
+   </property>
+  </action>
+  <action name="action">
+   <property name="text">
+    <string>Сохранить кадры</string>
+   </property>
+  </action>
+  <action name="action_2">
+   <property name="text">
+    <string>Сохранить как...</string>
+   </property>
+  </action>
+  <action name="action_3">
+   <property name="text">
+    <string>О программе</string>
+   </property>
+  </action>
+  <action name="action_4">
+   <property name="text">
+    <string>Настройки</string>
+   </property>
+  </action>
+  <action name="x1">
+   <property name="text">
+    <string>1 к/с</string>
+   </property>
+  </action>
+  <action name="x2">
+   <property name="text">
+    <string>2 к/с</string>
+   </property>
+  </action>
+  <action name="x4">
+   <property name="text">
+    <string>4 к/с</string>
+   </property>
+  </action>
+  <action name="x8">
+   <property name="text">
+    <string>8 к/с</string>
+   </property>
+  </action>
+  <action name="x16">
+   <property name="text">
+    <string>16 к/с</string>
+   </property>
+  </action>
+  <action name="x25">
+   <property name="text">
+    <string>25 к/с</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>MyButton</class>
+   <extends>QPushButton</extends>
+   <header location="global">button.h</header>
+  </customwidget>
+  <customwidget>
+   <class>LCDDisplay</class>
+   <extends>QOpenGLWidget</extends>
+   <header location="global">display.h</header>
+  </customwidget>
+  <customwidget>
+   <class>Diod</class>
+   <extends>QLabel</extends>
+   <header location="global">label.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
