@@ -52,7 +52,9 @@ set (SOURCES  src/main.cpp
               src/reader/sbireader.h
               src/reader/sbitoolreader.h
               src/gui/settings.h
-              src/gui/treemanager.h)
+              src/gui/treemanager.h
+              src/pult.h
+              src/utils.h)
 
 qt5_add_resources(SOURCES resources.qrc)
 add_executable(${PROJECT_NAME} ${SOURCES})
